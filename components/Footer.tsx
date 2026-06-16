@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { destinations } from '@/lib/destinations'
+import FooterNewsletterForm from './FooterNewsletterForm'
 
 export default function Footer() {
   return (
@@ -93,19 +94,7 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-white mb-4 uppercase tracking-wider text-sm">Newsletter</h3>
             <p className="text-gray-400 text-sm mb-4">Get travel tips and exclusive deals delivered to your inbox.</p>
-            <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder="Your email address"
-                className="w-full px-4 py-2.5 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-500 text-sm focus:outline-none focus:border-primary"
-              />
-              <button
-                type="submit"
-                className="w-full bg-primary text-white py-2.5 rounded-lg font-semibold text-sm hover:bg-primary/90 transition-colors"
-              >
-                Subscribe
-              </button>
-            </form>
+            <FooterNewsletterForm />
             <div className="mt-6 space-y-2">
               <div className="flex items-center gap-2 text-gray-400 text-sm">
                 <svg className="w-4 h-4 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
