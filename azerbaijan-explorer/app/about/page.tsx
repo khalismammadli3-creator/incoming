@@ -1,0 +1,163 @@
+import { Metadata } from 'next'
+import Image from 'next/image'
+import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Learn about Azerbaijan Explorer — our story, mission, and the passionate team behind your perfect Azerbaijan travel experience.',
+}
+
+const teamMembers = [
+  { name: 'Anar Mammadov', role: 'Founder & Lead Guide', initials: 'AM', bio: 'Born in Baku, Anar has guided thousands of travellers across Azerbaijan for over 12 years.' },
+  { name: 'Leyla Hasanova', role: 'Tour Operations Manager', initials: 'LH', bio: 'Leyla ensures every journey runs flawlessly, from bookings to on-the-ground logistics.' },
+  { name: 'Rustam Aliyev', role: 'Mountain & Adventure Guide', initials: 'RA', bio: 'A certified mountain guide, Rustam leads all treks to Khinalig, Gabala and the Greater Caucasus.' },
+  { name: 'Nigar Guliyeva', role: 'Cultural Heritage Specialist', initials: 'NG', bio: 'Nigar holds a PhD in Azerbaijani history and brings exceptional depth to every cultural tour.' },
+]
+
+export default function AboutPage() {
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative pt-32 pb-24 bg-secondary dark:bg-dark overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Story</span>
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mt-3 mb-5">About Azerbaijan Explorer</h1>
+          <p className="text-blue-200 text-lg max-w-2xl mx-auto leading-relaxed">
+            We are a team of passionate Azerbaijanis dedicated to sharing the extraordinary beauty, history, and culture of our homeland with the world.
+          </p>
+        </div>
+      </section>
+
+      {/* Mission */}
+      <section className="py-20 bg-white dark:bg-dark">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Mission</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-3 mb-6">
+                Crafting Authentic Azerbaijani Experiences
+              </h2>
+              <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+                <p>
+                  Founded in 2015 in Baku, Azerbaijan Explorer was born from a simple belief: that Azerbaijan deserves to be one of the world&apos;s great travel destinations. For too long, this remarkable country — with its fire temples, silk road history, Caucasus peaks and Caspian coast — remained hidden from the world.
+                </p>
+                <p>
+                  We set out to change that. Today, we&apos;ve guided over 10,000 travellers from 60+ countries on unforgettable journeys across Azerbaijan. Every tour we design goes beyond tourist highlights — we connect our guests with local families, ancient traditions, and hidden landscapes that most visitors never see.
+                </p>
+                <p>
+                  Our guides are Azerbaijanis who grew up in the regions they lead. This means you get insights, stories, and access that no guidebook can provide.
+                </p>
+              </div>
+            </div>
+            <div className="relative h-80 lg:h-96 rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="https://picsum.photos/seed/aboutbaku/800/600"
+                alt="Baku skyline with Flame Towers"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="py-16 bg-primary">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {[
+              { value: '10,000+', label: 'Happy Travellers' },
+              { value: '60+', label: 'Countries Represented' },
+              { value: '10', label: 'Unique Destinations' },
+              { value: '9', label: 'Years of Experience' },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <div className="text-3xl sm:text-4xl font-bold text-white mb-2">{stat.value}</div>
+                <div className="text-primary-100 text-white/80 font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Values</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-3">
+              What We Stand For
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Authentic Experiences',
+                desc: 'We go beyond tourist attractions to offer genuine cultural immersion, local family visits, and off-the-beaten-path discoveries.',
+                icon: '🏔️',
+              },
+              {
+                title: 'Sustainable Tourism',
+                desc: 'We are committed to responsible travel that benefits local communities, preserves cultural heritage, and protects natural environments.',
+                icon: '🌱',
+              },
+              {
+                title: 'Expert Local Guides',
+                desc: 'Every guide is a passionate Azerbaijani expert in their region — providing depth, nuance and personal connection that no outsider can match.',
+                icon: '🧭',
+              },
+            ].map((val, idx) => (
+              <div key={idx} className="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+                <div className="text-5xl mb-5">{val.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{val.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{val.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="py-20 bg-white dark:bg-dark">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <span className="text-primary font-semibold text-sm uppercase tracking-wider">The People</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-3">
+              Meet Our Team
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, idx) => (
+              <div key={idx} className="text-center group">
+                <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  {member.initials}
+                </div>
+                <h3 className="font-bold text-gray-900 dark:text-white text-lg">{member.name}</h3>
+                <p className="text-primary font-medium text-sm mb-3">{member.role}</p>
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{member.bio}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-accent dark:bg-gray-800">
+        <div className="max-w-3xl mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ready to Explore Azerbaijan?</h2>
+          <p className="text-gray-600 dark:text-gray-400 mb-8">Let our team craft your perfect Azerbaijani adventure.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/#tours" className="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-primary/90 transition-colors">
+              Browse Tours
+            </Link>
+            <Link href="/contact" className="border-2 border-primary text-primary px-8 py-4 rounded-full font-semibold hover:bg-primary hover:text-white transition-colors">
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
