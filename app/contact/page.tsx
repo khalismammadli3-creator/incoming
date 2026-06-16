@@ -10,10 +10,10 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-secondary dark:bg-dark overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
+      <section className="relative pt-32 pb-20 bg-primary overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Get in Touch</span>
+          <span className="text-accent font-semibold text-sm uppercase tracking-wider">Get in Touch</span>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mt-3 mb-5">Contact Us</h1>
           <p className="text-blue-200 text-lg max-w-xl mx-auto">
             Ready to plan your Azerbaijan adventure? Our travel experts are here to craft the perfect journey for you.
@@ -22,13 +22,13 @@ export default function ContactPage() {
       </section>
 
       {/* Content */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+      <section className="py-16 bg-light">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Info */}
             <div className="space-y-6">
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">How to Reach Us</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">How to Reach Us</h2>
               </div>
 
               {[
@@ -64,13 +64,13 @@ export default function ContactPage() {
                   link: '#',
                 },
               ].map((item, idx) => (
-                <div key={idx} className="flex items-start gap-4 p-5 bg-white dark:bg-gray-800 rounded-2xl shadow-sm">
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
+                <div key={idx} className="flex items-start gap-4 p-5 bg-white rounded-2xl shadow-sm">
+                  <div className="w-12 h-12 bg-accent/15 rounded-xl flex items-center justify-center text-accent flex-shrink-0">
                     {item.icon}
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900 dark:text-white mb-1">{item.title}</div>
-                    <a href={item.link} className="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors">
+                    <div className="font-semibold text-gray-900 mb-1">{item.title}</div>
+                    <a href={item.link} className="text-gray-600 hover:text-accent transition-colors">
                       {item.value}
                     </a>
                   </div>
@@ -93,8 +93,8 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm p-8 border border-gray-100 dark:border-gray-700">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Send Us a Message</h2>
+              <div className="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
                 <ContactForm />
               </div>
             </div>

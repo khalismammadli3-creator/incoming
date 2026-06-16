@@ -57,15 +57,15 @@ const features = [
 
 export default function WhyAzerbaijanSection() {
   return (
-    <section className="py-20 bg-white dark:bg-dark">
+    <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Why Choose Azerbaijan</span>
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mt-2 mb-4">
+          <span className="text-accent font-semibold text-sm uppercase tracking-wider">Why Choose Azerbaijan</span>
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mt-2 mb-4">
             The Land of Fire Awaits
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto">
             Azerbaijan is not just a destination — it&apos;s an experience unlike any other. Here&apos;s why travellers fall in love with it.
           </p>
         </div>
@@ -75,15 +75,15 @@ export default function WhyAzerbaijanSection() {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="group p-8 bg-gray-50 dark:bg-gray-800 rounded-2xl hover:bg-primary hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-default"
+              className="group p-8 bg-light rounded-2xl hover:bg-primary hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-default"
             >
-              <div className="text-primary group-hover:text-white transition-colors mb-5">
+              <div className="text-accent group-hover:text-white transition-colors mb-5">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-white mb-3 transition-colors">
+              <h3 className="text-xl font-bold text-gray-900 group-hover:text-white mb-3 transition-colors">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 group-hover:text-white/80 transition-colors leading-relaxed">
+              <p className="text-gray-600 group-hover:text-white/80 transition-colors leading-relaxed">
                 {feature.description}
               </p>
             </div>

@@ -30,11 +30,11 @@ export default function FooterNewsletterForm() {
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Your email address"
         required
-        className="w-full px-4 py-2.5 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-500 text-sm focus:outline-none focus:border-primary"
+        className="w-full px-4 py-2.5 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-500 text-sm focus:outline-none focus:border-accent"
       />
       <button
         type="submit"
-        className="w-full bg-primary text-white py-2.5 rounded-lg font-semibold text-sm hover:bg-primary/90 transition-colors"
+        className="w-full bg-accent text-primary py-2.5 rounded-lg font-bold text-sm hover:bg-accent-hover transition-colors"
       >
         Subscribe
       </button>

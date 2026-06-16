@@ -18,10 +18,10 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-24 bg-secondary dark:bg-dark overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
+      <section className="relative pt-32 pb-24 bg-primary overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Story</span>
+          <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Story</span>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mt-3 mb-5">About Azerbaijan Explorer</h1>
           <p className="text-blue-200 text-lg max-w-2xl mx-auto leading-relaxed">
             We are a team of passionate Azerbaijanis dedicated to sharing the extraordinary beauty, history, and culture of our homeland with the world.
@@ -30,15 +30,15 @@ export default function AboutPage() {
       </section>
 
       {/* Mission */}
-      <section className="py-20 bg-white dark:bg-dark">
+      <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Mission</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-3 mb-6">
+              <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Mission</span>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-6">
                 Crafting Authentic Azerbaijani Experiences
               </h2>
-              <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+              <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
                   Founded in 2015 in Baku, Azerbaijan Explorer was born from a simple belief: that Azerbaijan deserves to be one of the world&apos;s great travel destinations. For too long, this remarkable country — with its fire temples, silk road history, Caucasus peaks and Caspian coast — remained hidden from the world.
                 </p>
@@ -74,8 +74,8 @@ export default function AboutPage() {
               { value: '9', label: 'Years of Experience' },
             ].map((stat) => (
               <div key={stat.label}>
-                <div className="text-3xl sm:text-4xl font-bold text-white mb-2">{stat.value}</div>
-                <div className="text-primary-100 text-white/80 font-medium">{stat.label}</div>
+                <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">{stat.value}</div>
+                <div className="text-white/80 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -83,11 +83,11 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      <section className="py-20 bg-light">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">Our Values</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-3">
+            <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Values</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">
               What We Stand For
             </h2>
           </div>
@@ -109,10 +109,10 @@ export default function AboutPage() {
                 icon: '🧭',
               },
             ].map((val, idx) => (
-              <div key={idx} className="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
+              <div key={idx} className="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
                 <div className="text-5xl mb-5">{val.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{val.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{val.desc}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">{val.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{val.desc}</p>
               </div>
             ))}
           </div>
@@ -120,23 +120,23 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-20 bg-white dark:bg-dark">
+      <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">The People</span>
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-3">
+            <span className="text-accent font-semibold text-sm uppercase tracking-wider">The People</span>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">
               Meet Our Team
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, idx) => (
               <div key={idx} className="text-center group">
-                <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center text-primary font-bold text-xl mx-auto mb-4 group-hover:scale-110 transition-transform">
                   {member.initials}
                 </div>
-                <h3 className="font-bold text-gray-900 dark:text-white text-lg">{member.name}</h3>
-                <p className="text-primary font-medium text-sm mb-3">{member.role}</p>
-                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">{member.bio}</p>
+                <h3 className="font-bold text-gray-900 text-lg">{member.name}</h3>
+                <p className="text-accent font-medium text-sm mb-3">{member.role}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
               </div>
             ))}
           </div>
@@ -144,15 +144,15 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-accent dark:bg-gray-800">
+      <section className="py-16 bg-light">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Ready to Explore Azerbaijan?</h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">Let our team craft your perfect Azerbaijani adventure.</p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Explore Azerbaijan?</h2>
+          <p className="text-gray-600 mb-8">Let our team craft your perfect Azerbaijani adventure.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#tours" className="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-primary/90 transition-colors">
+            <Link href="/#tours" className="bg-accent text-primary px-8 py-4 rounded-full font-bold hover:bg-accent-hover transition-colors">
               Browse Tours
             </Link>
-            <Link href="/contact" className="border-2 border-primary text-primary px-8 py-4 rounded-full font-semibold hover:bg-primary hover:text-white transition-colors">
+            <Link href="/contact" className="border-2 border-accent text-accent px-8 py-4 rounded-full font-semibold hover:bg-accent hover:text-primary transition-colors">
               Contact Us
             </Link>
           </div>

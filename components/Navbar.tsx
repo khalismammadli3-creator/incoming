@@ -21,44 +21,27 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/95 dark:bg-dark/95 backdrop-blur-md shadow-lg'
+          ? 'bg-white/98 backdrop-blur-md shadow-lg'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <svg
-              className="w-8 h-8 text-primary"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-            >
-              <circle cx="12" cy="12" r="10" />
-              <line x1="12" y1="2" x2="12" y2="22" />
-              <line x1="2" y1="12" x2="22" y2="12" />
-              <path d="M12 2 C6 6 6 18 12 22 C18 18 18 6 12 2" />
-              <path d="M12 7 L14 12 L12 17 L10 12 Z" fill="currentColor" />
-            </svg>
-            <span
-              className={`font-bold text-lg transition-colors ${
-                scrolled
-                  ? 'text-secondary dark:text-white'
-                  : 'text-white'
-              } group-hover:text-primary`}
-            >
-              Azerbaijan Explorer
-            </span>
+          <Link href="/" className="flex items-center">
+            {scrolled ? (
+              <img src="/images/logos/D_Medium.png" alt="Lumivara Travel" className="h-9 w-auto" />
+            ) : (
+              <img src="/images/logos/L_Medium.png" alt="Lumivara Travel" className="h-9 w-auto" />
+            )}
           </Link>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-8">
             <Link
               href="/"
-              className={`font-medium transition-colors hover:text-primary ${
-                scrolled ? 'text-gray-700 dark:text-gray-200' : 'text-white'
+              className={`font-medium transition-colors hover:text-accent ${
+                scrolled ? 'text-gray-700' : 'text-white'
               }`}
             >
               Home
@@ -71,8 +54,8 @@ export default function Navbar() {
               onMouseLeave={() => setDestinationsOpen(false)}
             >
               <button
-                className={`flex items-center gap-1 font-medium transition-colors hover:text-primary ${
-                  scrolled ? 'text-gray-700 dark:text-gray-200' : 'text-white'
+                className={`flex items-center gap-1 font-medium transition-colors hover:text-accent ${
+                  scrolled ? 'text-gray-700' : 'text-white'
                 }`}
               >
                 Destinations
@@ -81,15 +64,15 @@ export default function Navbar() {
                 </svg>
               </button>
               {destinationsOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white dark:bg-gray-800 rounded-xl shadow-2xl border border-gray-100 dark:border-gray-700 py-2 grid grid-cols-1 gap-0">
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 grid grid-cols-1 gap-0">
                   {destinations.map((dest) => (
                     <Link
                       key={dest.slug}
                       href={`/${dest.slug}`}
-                      className="flex items-center gap-3 px-4 py-2.5 hover:bg-accent dark:hover:bg-gray-700 transition-colors"
+                      className="flex items-center gap-3 px-4 py-2.5 hover:bg-light transition-colors"
                     >
-                      <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
-                      <span className="text-sm text-gray-700 dark:text-gray-200">{dest.name}</span>
+                      <span className="w-2 h-2 rounded-full bg-accent flex-shrink-0" />
+                      <span className="text-sm text-gray-700">{dest.name}</span>
                       <span className="ml-auto text-xs text-gray-400">{dest.category}</span>
                     </Link>
                   ))}
@@ -99,8 +82,8 @@ export default function Navbar() {
 
             <Link
               href="/about"
-              className={`font-medium transition-colors hover:text-primary ${
-                scrolled ? 'text-gray-700 dark:text-gray-200' : 'text-white'
+              className={`font-medium transition-colors hover:text-accent ${
+                scrolled ? 'text-gray-700' : 'text-white'
               }`}
             >
               About
@@ -108,8 +91,8 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className={`font-medium transition-colors hover:text-primary ${
-                scrolled ? 'text-gray-700 dark:text-gray-200' : 'text-white'
+              className={`font-medium transition-colors hover:text-accent ${
+                scrolled ? 'text-gray-700' : 'text-white'
               }`}
             >
               Contact
@@ -123,7 +106,7 @@ export default function Navbar() {
               onClick={toggleTheme}
               className={`p-2 rounded-full transition-colors ${
                 scrolled
-                  ? 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                  ? 'text-gray-600 hover:bg-gray-100'
                   : 'text-white hover:bg-white/20'
               }`}
               aria-label="Toggle dark mode"
@@ -141,7 +124,7 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="bg-primary text-white px-6 py-2.5 rounded-full font-semibold hover:bg-primary/90 transition-colors shadow-md"
+              className="bg-accent text-primary px-6 py-2.5 rounded-full font-bold hover:bg-accent-hover transition-colors shadow-md"
             >
               Book Now
             </Link>
@@ -151,7 +134,7 @@ export default function Navbar() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className={`lg:hidden p-2 rounded-md ${
-              scrolled ? 'text-gray-700 dark:text-gray-200' : 'text-white'
+              scrolled ? 'text-gray-700' : 'text-white'
             }`}
           >
             {mobileOpen ? (
@@ -169,19 +152,19 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-white dark:bg-dark border-t border-gray-200 dark:border-gray-700 shadow-xl">
+        <div className="lg:hidden bg-white border-t border-gray-200 shadow-xl">
           <div className="px-4 py-4 space-y-3">
             <Link
               href="/"
               onClick={() => setMobileOpen(false)}
-              className="block py-2 text-gray-700 dark:text-gray-200 font-medium hover:text-primary"
+              className="block py-2 text-gray-700 font-medium hover:text-accent"
             >
               Home
             </Link>
             <div>
               <button
                 onClick={() => setDestinationsOpen(!destinationsOpen)}
-                className="flex items-center justify-between w-full py-2 text-gray-700 dark:text-gray-200 font-medium hover:text-primary"
+                className="flex items-center justify-between w-full py-2 text-gray-700 font-medium hover:text-accent"
               >
                 Destinations
                 <svg className={`w-4 h-4 transition-transform ${destinationsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -195,7 +178,7 @@ export default function Navbar() {
                       key={dest.slug}
                       href={`/${dest.slug}`}
                       onClick={() => setMobileOpen(false)}
-                      className="block py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-primary"
+                      className="block py-1.5 text-sm text-gray-600 hover:text-accent"
                     >
                       {dest.name}
                     </Link>
@@ -206,28 +189,28 @@ export default function Navbar() {
             <Link
               href="/about"
               onClick={() => setMobileOpen(false)}
-              className="block py-2 text-gray-700 dark:text-gray-200 font-medium hover:text-primary"
+              className="block py-2 text-gray-700 font-medium hover:text-accent"
             >
               About
             </Link>
             <Link
               href="/contact"
               onClick={() => setMobileOpen(false)}
-              className="block py-2 text-gray-700 dark:text-gray-200 font-medium hover:text-primary"
+              className="block py-2 text-gray-700 font-medium hover:text-accent"
             >
               Contact
             </Link>
-            <div className="flex items-center gap-4 pt-2 border-t border-gray-200 dark:border-gray-700">
+            <div className="flex items-center gap-4 pt-2 border-t border-gray-200">
               <button
                 onClick={() => { toggleTheme(); }}
-                className="p-2 text-gray-600 dark:text-gray-300"
+                className="p-2 text-gray-600"
               >
                 {theme === 'dark' ? 'Light Mode ☀️' : 'Dark Mode 🌙'}
               </button>
               <Link
                 href="/contact"
                 onClick={() => setMobileOpen(false)}
-                className="bg-primary text-white px-5 py-2 rounded-full font-semibold hover:bg-primary/90 transition-colors"
+                className="bg-accent text-primary px-5 py-2 rounded-full font-bold hover:bg-accent-hover transition-colors"
               >
                 Book Now
               </Link>

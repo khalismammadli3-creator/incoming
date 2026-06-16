@@ -27,11 +27,11 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-20 bg-secondary dark:bg-gray-900">
+    <section className="py-20 bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Traveler Stories</span>
+          <span className="text-accent font-semibold text-sm uppercase tracking-wider">Traveler Stories</span>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mt-2 mb-4">
             What Our Guests Say
           </h2>
@@ -47,7 +47,7 @@ export default function TestimonialsSection() {
               {/* Stars */}
               <div className="flex gap-1">
                 {Array.from({ length: t.stars }).map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-primary fill-current" viewBox="0 0 24 24">
+                  <svg key={i} className="w-5 h-5 text-accent fill-current" viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
                 ))}
@@ -59,11 +59,11 @@ export default function TestimonialsSection() {
               </p>
 
               {/* Tour */}
-              <span className="text-primary text-sm font-semibold">{t.tour}</span>
+              <span className="text-accent text-sm font-semibold">{t.tour}</span>
 
               {/* Author */}
               <div className="flex items-center gap-3 pt-4 border-t border-white/20">
-                <div className="w-11 h-11 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                <div className="w-11 h-11 bg-accent rounded-full flex items-center justify-center text-primary font-bold text-sm flex-shrink-0">
                   {t.initials}
                 </div>
                 <div>
@@ -80,7 +80,7 @@ export default function TestimonialsSection() {
           <div className="inline-flex items-center gap-3 bg-white/10 border border-white/20 px-8 py-4 rounded-full">
             <div className="flex gap-1">
               {[1,2,3,4,5].map((i) => (
-                <svg key={i} className="w-5 h-5 text-primary fill-current" viewBox="0 0 24 24">
+                <svg key={i} className="w-5 h-5 text-accent fill-current" viewBox="0 0 24 24">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
               ))}

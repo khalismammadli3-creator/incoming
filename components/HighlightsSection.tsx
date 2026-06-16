@@ -15,23 +15,23 @@ const highlightIcons = [
 
 export default function HighlightsSection({ destination }: HighlightsSectionProps) {
   return (
-    <section className="py-16 bg-white dark:bg-dark">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider">Must-See</span>
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-2">
+          <span className="text-accent font-semibold text-sm uppercase tracking-wider">Must-See</span>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
             Key Attractions
           </h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {destination.highlights.map((highlight, idx) => (
-            <div key={idx} className="flex items-start gap-4 p-6 bg-gray-50 dark:bg-gray-800 rounded-2xl hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary flex-shrink-0">
+            <div key={idx} className="flex items-start gap-4 p-6 bg-light rounded-2xl hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 bg-accent/15 rounded-xl flex items-center justify-center text-accent flex-shrink-0">
                 {highlightIcons[idx % highlightIcons.length]}
               </div>
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white leading-snug">{highlight}</p>
+                <p className="font-semibold text-gray-900 leading-snug">{highlight}</p>
               </div>
             </div>
           ))}
