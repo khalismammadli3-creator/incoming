@@ -21,7 +21,7 @@ export default function HeroSection() {
       {/* Background */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('https://picsum.photos/seed/azerbaijanhero/1920/1080')" }}
+        style={{ backgroundImage: "url('/images/hero.webp')" }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70" />
 
