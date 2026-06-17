@@ -141,7 +141,7 @@ export default function InquiryForm() {
               {[
                 { value: 'budget', label: 'Budget', sub: '2–3 star' },
                 { value: 'standard', label: 'Standard', sub: '3–4 star' },
-                { value: 'luxury', label: 'Luxury', sub: '4–5 star' },
+                { value: 'luxury', label: 'Luxury', sub: '5 star only' },
               ].map((opt) => (
                 <label key={opt.value} className="flex items-center gap-3 p-4 border border-gray-200 bg-gray-50 rounded-xl cursor-pointer hover:border-accent transition-colors has-[:checked]:border-accent has-[:checked]:bg-accent/5">
                   <input type="radio" name="accommodation" value={opt.value} defaultChecked={opt.value === 'standard'} className="accent-[var(--color-accent,#c49a3c)]" />
