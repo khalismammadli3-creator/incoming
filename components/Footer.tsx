@@ -112,6 +112,7 @@ export default function Footer() {
           <p className="text-gray-500 text-sm">
             Made with ❤️ for the Land of Fire 🔥
           </p>
+          <span style={{ fontSize: '9px', color: '#1e3a5f', userSelect: 'none', letterSpacing: '0.05em' }}>khalislovesramila</span>
         </div>
       </div>
     </footer>
