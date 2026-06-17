@@ -19,10 +19,17 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
       {/* Background */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/hero.webp')" }}
-      />
+      <style>{`
+        .hero-bg {
+          background-image: url('/images/hero-mobile.webp');
+        }
+        @media (min-width: 769px) {
+          .hero-bg {
+            background-image: url('/images/hero.webp');
+          }
+        }
+      `}</style>
+      <div className="hero-bg absolute inset-0 bg-cover bg-center bg-no-repeat" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70" />
 
       {/* Content */}
