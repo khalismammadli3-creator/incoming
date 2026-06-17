@@ -1,27 +1,34 @@
-const testimonials = [
+const valueProps = [
   {
-    initials: 'SJ',
-    name: 'Sarah Johnson',
-    country: 'United Kingdom',
-    stars: 5,
-    text: 'The Baku City Tour exceeded every expectation. Our guide was incredibly knowledgeable and the Old City at night was absolutely magical. Azerbaijan Explorer made everything seamless from start to finish.',
-    tour: 'Baku City Tour',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
+    title: 'Deep Local Knowledge',
+    description: 'Our team lives and breathes Azerbaijan. We know the hidden villages, the best family-run restaurants, the off-season festivals, and the mountain roads that don\'t appear on maps — because we\'ve been there.',
+    tag: 'From Baku to Khinalig',
   },
   {
-    initials: 'MK',
-    name: 'Markus Klein',
-    country: 'Germany',
-    stars: 5,
-    text: 'Khinalig was the most extraordinary place I have ever visited. Staying in the village guesthouse, meeting the shepherds, and watching the sunrise over the Caucasus from 2,350m — pure, unforgettable magic.',
-    tour: 'Khinalig Village Tour',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+      </svg>
+    ),
+    title: 'Personalised for Every Group',
+    description: 'No two groups are the same. We design every itinerary around your pace, interests, and budget — whether you\'re a group of incentive travellers, a cultural study tour, or a small family looking for something authentic.',
+    tag: 'Tailored, not templated',
   },
   {
-    initials: 'YT',
-    name: 'Yuki Tanaka',
-    country: 'Japan',
-    stars: 5,
-    text: 'Sheki is a hidden gem. The Palace of the Sheki Khans is one of the most beautiful buildings I have ever seen, and the shebeke workshop was a unique hands-on experience. Highly recommend!',
-    tour: 'Sheki Silk Road Experience',
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+    title: 'End-to-End Management',
+    description: 'From the airport welcome board to the final hotel check-out, we manage every detail — accommodation, private transport, licensed guides, permits, restaurant bookings, and 24/7 on-ground support throughout.',
+    tag: 'Seamless from arrival to departure',
   },
 ]
 
@@ -31,62 +38,45 @@ export default function TestimonialsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14">
-          <span className="text-accent font-semibold text-sm uppercase tracking-wider">Traveler Stories</span>
+          <span className="text-accent font-semibold text-sm uppercase tracking-wider">Why Lumivara Incoming</span>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mt-2 mb-4">
-            What Our Guests Say
+            Your DMC in Azerbaijan
           </h2>
           <p className="text-blue-200 text-lg max-w-xl mx-auto">
-            Real experiences from real travellers who fell in love with Azerbaijan.
+            We are a boutique destination management company built around one goal: giving every group a genuine, seamless Azerbaijan experience.
           </p>
         </div>
 
-        {/* Testimonials */}
+        {/* Value Prop Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((t, idx) => (
+          {valueProps.map((prop, idx) => (
             <div key={idx} className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 flex flex-col gap-4">
-              {/* Stars */}
-              <div className="flex gap-1">
-                {Array.from({ length: t.stars }).map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-accent fill-current" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                  </svg>
-                ))}
+              {/* Icon */}
+              <div className="text-accent">
+                {prop.icon}
               </div>
 
-              {/* Quote */}
-              <p className="text-blue-100 leading-relaxed italic flex-1">
-                &ldquo;{t.text}&rdquo;
+              {/* Title */}
+              <h3 className="text-white font-bold text-xl">{prop.title}</h3>
+
+              {/* Description */}
+              <p className="text-blue-100 leading-relaxed flex-1">
+                {prop.description}
               </p>
 
-              {/* Tour */}
-              <span className="text-accent text-sm font-semibold">{t.tour}</span>
-
-              {/* Author */}
-              <div className="flex items-center gap-3 pt-4 border-t border-white/20">
-                <div className="w-11 h-11 bg-accent rounded-full flex items-center justify-center text-primary font-bold text-sm flex-shrink-0">
-                  {t.initials}
-                </div>
-                <div>
-                  <div className="text-white font-semibold">{t.name}</div>
-                  <div className="text-blue-300 text-sm">{t.country}</div>
-                </div>
-              </div>
+              {/* Tag */}
+              <span className="text-accent text-sm font-semibold">{prop.tag}</span>
             </div>
           ))}
         </div>
 
-        {/* Rating summary */}
+        {/* Bottom tagline */}
         <div className="mt-12 text-center">
           <div className="inline-flex items-center gap-3 bg-white/10 border border-white/20 px-8 py-4 rounded-full">
-            <div className="flex gap-1">
-              {[1,2,3,4,5].map((i) => (
-                <svg key={i} className="w-5 h-5 text-accent fill-current" viewBox="0 0 24 24">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-              ))}
-            </div>
-            <span className="text-white font-bold text-lg">4.9/5</span>
-            <span className="text-blue-200">based on 2,400+ reviews</span>
+            <svg className="w-5 h-5 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            <span className="text-blue-200">Strong relationships with local suppliers across all regions of Azerbaijan</span>
           </div>
         </div>
       </div>

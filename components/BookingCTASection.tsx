@@ -39,7 +39,7 @@ export default function BookingCTASection() {
           {[
             { icon: '🔒', text: 'Secure Booking' },
             { icon: '✈️', text: 'Flexible Cancellation' },
-            { icon: '🏆', text: 'Award-Winning Service' },
+            { icon: '🗺️', text: 'Local DMC Expertise' },
             { icon: '📞', text: '24/7 Support' },
           ].map((badge) => (
             <div key={badge.text} className="flex items-center gap-2 text-blue-200">

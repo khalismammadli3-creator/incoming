@@ -9,11 +9,11 @@ export default function HeroSection() {
   const [travelDate, setTravelDate] = useState('')
   const [travelers, setTravelers] = useState('2')
 
-  const stats = [
-    { value: '10+', label: 'Destinations' },
-    { value: '500+', label: 'Tours' },
-    { value: '10k+', label: 'Happy Travelers' },
-    { value: '4.9★', label: 'Rating' },
+  const valueProps = [
+    { value: 'Local Experts', label: 'Deep knowledge of every region' },
+    { value: 'Tailored Journeys', label: 'Personalised for every group' },
+    { value: 'End-to-End Care', label: 'Airport transfers to hotel check-in' },
+    { value: 'Multilingual Guides', label: 'English, Russian & more' },
   ]
 
   return (
@@ -118,15 +118,15 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Stats Bar */}
+      {/* Value Props Bar */}
       <div className="relative z-10 mt-auto">
         <div className="bg-black/40 backdrop-blur-sm border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {stats.map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <div className="text-2xl sm:text-3xl font-bold text-accent">{stat.value}</div>
-                  <div className="text-gray-300 text-sm mt-1">{stat.label}</div>
+              {valueProps.map((prop) => (
+                <div key={prop.label} className="text-center">
+                  <div className="text-lg sm:text-xl font-bold text-accent">{prop.value}</div>
+                  <div className="text-gray-300 text-sm mt-1">{prop.label}</div>
                 </div>
               ))}
             </div>
