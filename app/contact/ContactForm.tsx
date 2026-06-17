@@ -4,22 +4,32 @@ import { useState } from 'react'
 import { destinations } from '@/lib/destinations'
 
 export default function ContactForm() {
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    destination: '',
-    message: '',
-  })
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
+  const [loading, setLoading] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setSubmitted(true)
+    setLoading(true)
+    setError(false)
+    const form = e.currentTarget
+    const data = new FormData(form)
+    try {
+      const res = await fetch('https://formspree.io/f/xvznnrbp', {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    } finally {
+      setLoading(false)
+    }
   }
 
   if (submitted) {
@@ -44,8 +54,6 @@ export default function ContactForm() {
           <input
             type="text"
             name="name"
-            value={form.name}
-            onChange={handleChange}
             required
             placeholder="Your full name"
             className="w-full px-4 py-3 border border-gray-200 bg-gray-50 text-gray-900 rounded-xl focus:outline-none focus:border-accent"
@@ -56,8 +64,6 @@ export default function ContactForm() {
           <input
             type="email"
             name="email"
-            value={form.email}
-            onChange={handleChange}
             required
             placeholder="your@email.com"
             className="w-full px-4 py-3 border border-gray-200 bg-gray-50 text-gray-900 rounded-xl focus:outline-none focus:border-accent"
@@ -71,8 +77,6 @@ export default function ContactForm() {
           <input
             type="tel"
             name="phone"
-            value={form.phone}
-            onChange={handleChange}
             placeholder="+1 234 567 8900"
             className="w-full px-4 py-3 border border-gray-200 bg-gray-50 text-gray-900 rounded-xl focus:outline-none focus:border-accent"
           />
@@ -81,8 +85,6 @@ export default function ContactForm() {
           <label className="block text-sm font-medium text-gray-700 mb-1.5">Destination Interest</label>
           <select
             name="destination"
-            value={form.destination}
-            onChange={handleChange}
             className="w-full px-4 py-3 border border-gray-200 bg-gray-50 text-gray-900 rounded-xl focus:outline-none focus:border-accent"
           >
             <option value="">Select a destination</option>
@@ -98,8 +100,6 @@ export default function ContactForm() {
         <label className="block text-sm font-medium text-gray-700 mb-1.5">Message *</label>
         <textarea
           name="message"
-          value={form.message}
-          onChange={handleChange}
           required
           rows={5}
           placeholder="Tell us about your travel plans, group size, preferred dates, and any special requirements..."
@@ -107,11 +107,16 @@ export default function ContactForm() {
         />
       </div>
 
+      {error && (
+        <p className="text-red-500 text-sm">Something went wrong. Please try again or email us directly.</p>
+      )}
+
       <button
         type="submit"
-        className="w-full bg-accent text-primary py-4 rounded-xl font-bold text-lg hover:bg-accent-hover transition-colors"
+        disabled={loading}
+        className="w-full bg-accent text-primary py-4 rounded-xl font-bold text-lg hover:bg-accent-hover transition-colors disabled:opacity-60"
       >
-        Send Message
+        {loading ? 'Sending…' : 'Send Message'}
       </button>
     </form>
   )

@@ -3,14 +3,30 @@
 import { useState } from 'react'
 
 export default function NewsletterSection() {
-  const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const [error, setError] = useState(false)
+  const [loading, setLoading] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    if (email) {
-      setSubmitted(true)
-      setEmail('')
+    setLoading(true)
+    setError(false)
+    const data = new FormData(e.currentTarget)
+    try {
+      const res = await fetch('https://formspree.io/f/xvznnrbp', {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      })
+      if (res.ok) {
+        setSubmitted(true)
+      } else {
+        setError(true)
+      }
+    } catch {
+      setError(true)
+    } finally {
+      setLoading(false)
     }
   }
 
@@ -37,22 +53,30 @@ export default function NewsletterSection() {
             You&apos;re subscribed! Welcome aboard.
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter your email address"
-              required
-              className="flex-1 px-5 py-3.5 border border-gray-300 bg-white text-gray-900 rounded-full focus:outline-none focus:border-accent"
-            />
-            <button
-              type="submit"
-              className="bg-accent text-primary px-7 py-3.5 rounded-full font-bold hover:bg-accent-hover transition-colors whitespace-nowrap"
-            >
-              Subscribe
-            </button>
-          </form>
+          <>
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+              <input type="hidden" name="message" value="Newsletter subscription" />
+              <input
+                type="email"
+                name="email"
+                value={undefined}
+                onChange={undefined}
+                placeholder="Enter your email address"
+                required
+                className="flex-1 px-5 py-3.5 border border-gray-300 bg-white text-gray-900 rounded-full focus:outline-none focus:border-accent"
+              />
+              <button
+                type="submit"
+                disabled={loading}
+                className="bg-accent text-primary px-7 py-3.5 rounded-full font-bold hover:bg-accent-hover transition-colors whitespace-nowrap disabled:opacity-60"
+              >
+                {loading ? 'Subscribing…' : 'Subscribe'}
+              </button>
+            </form>
+            {error && (
+              <p className="text-red-500 text-sm mt-3">Something went wrong. Please try again.</p>
+            )}
+          </>
         )}
 
         <p className="text-gray-400 text-xs mt-4">

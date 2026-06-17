@@ -6,7 +6,7 @@ Used for: Contact form and inquiry form email submissions
 
 Login email: khalismammadli3@gmail.com
 
-Form endpoint: https://formspree.io/f/xxxxxxxx
+Form endpoint: https://formspree.io/f/xvznnrbp
 
 ---
 
