@@ -78,7 +78,7 @@ export const destinations: Destination[] = [
           'The Azerbaijani Manat (AZN) is the local currency. Cards are widely accepted in Baku, but carry some cash for markets.',
       },
     ],
-    image: 'https://picsum.photos/seed/baku/1200/800',
+    image: '/images/baku.webp',
     gallery: [
       'https://picsum.photos/seed/baku1/800/600',
       'https://picsum.photos/seed/baku2/800/600',
@@ -140,7 +140,7 @@ export const destinations: Destination[] = [
           'Wear comfortable walking shoes and clothes you don\'t mind getting muddy near the volcanoes. Sun protection is essential in summer.',
       },
     ],
-    image: 'https://picsum.photos/seed/gobustan/1200/800',
+    image: '/images/gobustan.webp',
     gallery: [
       'https://picsum.photos/seed/gobustan1/800/600',
       'https://picsum.photos/seed/gobustan2/800/600',
@@ -203,7 +203,7 @@ export const destinations: Destination[] = [
           'Yes, Sheki is very family-friendly with its scenic walking routes, craft workshops, and delicious local food. Children especially enjoy the palace and the colourful bazaar.',
       },
     ],
-    image: 'https://picsum.photos/seed/sheki/1200/800',
+    image: '/images/sheki.webp',
     gallery: [
       'https://picsum.photos/seed/sheki1/800/600',
       'https://picsum.photos/seed/sheki2/800/600',
@@ -267,7 +267,7 @@ export const destinations: Destination[] = [
           'Most activities cater to all skill levels with professional instructors. Zip-lining, archery and ATV rides are beginner-friendly.',
       },
     ],
-    image: 'https://picsum.photos/seed/gabala/1200/800',
+    image: '/images/gabala.webp',
     gallery: [
       'https://picsum.photos/seed/gabala1/800/600',
       'https://picsum.photos/seed/gabala2/800/600',
@@ -329,7 +329,7 @@ export const destinations: Destination[] = [
           'The village has basic electricity and limited mobile signal. This is part of the authentic experience — a genuine digital detox in the mountains.',
       },
     ],
-    image: 'https://picsum.photos/seed/khinalig/1200/800',
+    image: '/images/khinalig.webp',
     gallery: [
       'https://picsum.photos/seed/khinalig1/800/600',
       'https://picsum.photos/seed/khinalig2/800/600',
@@ -386,7 +386,7 @@ export const destinations: Destination[] = [
           'Apple harvest season is from August to October, when you can visit orchards, taste freshly picked apples and buy local jams and products.',
       },
     ],
-    image: 'https://picsum.photos/seed/quba/1200/800',
+    image: '/images/guba.webp',
     gallery: [
       'https://picsum.photos/seed/quba1/800/600',
       'https://picsum.photos/seed/quba2/800/600',
@@ -444,7 +444,7 @@ export const destinations: Destination[] = [
           'The road is paved but narrow and winding. It is perfectly navigable in a standard car but can be closed after heavy snow in winter. Spring and autumn offer beautiful scenery along the route.',
       },
     ],
-    image: 'https://picsum.photos/seed/lahij/1200/800',
+    image: '/images/lahij.webp',
     gallery: [
       'https://picsum.photos/seed/lahij1/800/600',
       'https://picsum.photos/seed/lahij2/800/600',
@@ -502,7 +502,7 @@ export const destinations: Destination[] = [
           'The Bottle House (Şüşə Ev) was built by a local craftsman in the 1960s using approximately 48,000 bottles embedded in the walls. It is a unique example of folk architecture and one of Ganja\'s most photographed landmarks.',
       },
     ],
-    image: 'https://picsum.photos/seed/ganja/1200/800',
+    image: '/images/ganja.webp',
     gallery: [
       'https://picsum.photos/seed/ganja1/800/600',
       'https://picsum.photos/seed/ganja2/800/600',
@@ -559,7 +559,7 @@ export const destinations: Destination[] = [
           'Yes, the subtropical climate makes Lankaran pleasant year-round. Summer is warm and humid; winter is mild. Spring and autumn are ideal for trekking in the national park.',
       },
     ],
-    image: 'https://picsum.photos/seed/lankaran/1200/800',
+    image: '/images/lankaran.webp',
     gallery: [
       'https://picsum.photos/seed/lankaran1/800/600',
       'https://picsum.photos/seed/lankaran2/800/600',
@@ -616,7 +616,7 @@ export const destinations: Destination[] = [
           'No, Yanar Dag is not a volcano. It is a hillside where natural gas continuously seeps from the surface and burns. The fire has been documented since at least the 1950s and likely much earlier.',
       },
     ],
-    image: 'https://picsum.photos/seed/absheron/1200/800',
+    image: '/images/absheron.webp',
     gallery: [
       'https://picsum.photos/seed/absheron1/800/600',
       'https://picsum.photos/seed/absheron2/800/600',
