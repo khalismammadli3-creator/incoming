@@ -2,12 +2,14 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { destinations } from '@/lib/destinations'
 
 export default function HeroSection() {
-  const [submitted, setSubmitted] = useState(false)
-  const [error, setError] = useState(false)
-  const [loading, setLoading] = useState(false)
+  const router = useRouter()
+  const [selectedDest, setSelectedDest] = useState('')
+  const [travelDate, setTravelDate] = useState('')
+  const [travelers, setTravelers] = useState('2')
 
   const valueProps = [
     { value: 'Local Experts', label: 'Deep knowledge of every region' },
@@ -16,27 +18,13 @@ export default function HeroSection() {
     { value: 'Multilingual Guides', label: 'English, Russian & more' },
   ]
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
-    setLoading(true)
-    setError(false)
-    const data = new FormData(e.currentTarget)
-    try {
-      const res = await fetch('https://formspree.io/f/xvznnrbp', {
-        method: 'POST',
-        body: data,
-        headers: { Accept: 'application/json' },
-      })
-      if (res.ok) {
-        setSubmitted(true)
-      } else {
-        setError(true)
-      }
-    } catch {
-      setError(true)
-    } finally {
-      setLoading(false)
-    }
+    const params = new URLSearchParams()
+    if (selectedDest) params.set('destination', selectedDest)
+    if (travelDate) params.set('date', travelDate)
+    if (travelers) params.set('travelers', travelers)
+    router.push(`/inquiry?${params.toString()}`)
   }
 
   return (
@@ -90,68 +78,56 @@ export default function HeroSection() {
 
         {/* Search / Inquiry Bar */}
         <div className="w-full max-w-4xl bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 sm:p-6 shadow-2xl">
-          {submitted ? (
-            <div className="text-center py-4">
-              <div className="text-accent font-bold text-lg mb-1">Thank you for your enquiry!</div>
-              <p className="text-white/80 text-sm">We will be in touch with you shortly.</p>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit}>
-              {/* Hidden required fields for Formspree */}
-              <input type="hidden" name="name" value="Hero Inquiry" />
-              <input type="hidden" name="message" value="Inquiry submitted via hero search bar" />
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="flex flex-col gap-1">
-                  <label className="text-white/70 text-xs font-medium uppercase tracking-wider">Destination</label>
+          <form onSubmit={handleSearch}>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="flex flex-col gap-1">
+                <label className="text-white/70 text-xs font-medium uppercase tracking-wider">Destination</label>
+                <select
+                  value={selectedDest}
+                  onChange={(e) => setSelectedDest(e.target.value)}
+                  className="bg-white/15 border border-white/30 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-accent appearance-none cursor-pointer"
+                >
+                  <option value="" className="text-gray-900">All Destinations</option>
+                  {destinations.map((d) => (
+                    <option key={d.slug} value={d.slug} className="text-gray-900">{d.name}</option>
+                  ))}
+                </select>
+              </div>
+              <div className="flex flex-col gap-1">
+                <label className="text-white/70 text-xs font-medium uppercase tracking-wider">Travel Date</label>
+                <input
+                  type="date"
+                  value={travelDate}
+                  onChange={(e) => setTravelDate(e.target.value)}
+                  onClick={(e) => (e.currentTarget as HTMLInputElement).showPicker?.()}
+                  className="bg-white/15 border border-white/30 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-accent cursor-pointer w-full"
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <label className="text-white/70 text-xs font-medium uppercase tracking-wider">Travelers</label>
+                <div className="flex gap-2">
                   <select
-                    name="destination"
-                    className="bg-white/15 border border-white/30 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-accent appearance-none cursor-pointer"
+                    value={travelers}
+                    onChange={(e) => setTravelers(e.target.value)}
+                    className="flex-1 bg-white/15 border border-white/30 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-accent"
                   >
-                    <option value="" className="text-gray-900">All Destinations</option>
-                    {destinations.map((d) => (
-                      <option key={d.slug} value={d.slug} className="text-gray-900">{d.name}</option>
+                    {[1,2,3,4,5,6,7,8,9,10].map((n) => (
+                      <option key={n} value={n} className="text-gray-900">{n} {n === 1 ? 'Traveler' : 'Travelers'}</option>
                     ))}
                   </select>
-                </div>
-                <div className="flex flex-col gap-1">
-                  <label className="text-white/70 text-xs font-medium uppercase tracking-wider">Travel Date</label>
-                  <input
-                    type="date"
-                    name="travel_date"
-                    onClick={(e) => (e.currentTarget as HTMLInputElement).showPicker?.()}
-                    className="bg-white/15 border border-white/30 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-accent cursor-pointer w-full"
-                  />
-                </div>
-                <div className="flex flex-col gap-1">
-                  <label className="text-white/70 text-xs font-medium uppercase tracking-wider">Travelers</label>
-                  <div className="flex gap-2">
-                    <select
-                      name="travelers"
-                      defaultValue="2"
-                      className="flex-1 bg-white/15 border border-white/30 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-accent"
-                    >
-                      {[1,2,3,4,5,6,7,8,9,10].map((n) => (
-                        <option key={n} value={n} className="text-gray-900">{n} {n === 1 ? 'Traveler' : 'Travelers'}</option>
-                      ))}
-                    </select>
-                    <button
-                      type="submit"
-                      disabled={loading}
-                      className="bg-accent text-primary px-6 py-3 rounded-xl font-bold hover:bg-accent-hover transition-colors flex items-center gap-2 whitespace-nowrap disabled:opacity-60"
-                    >
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                      </svg>
-                      {loading ? '…' : 'Search'}
-                    </button>
-                  </div>
+                  <button
+                    type="submit"
+                    className="bg-accent text-primary px-6 py-3 rounded-xl font-bold hover:bg-accent-hover transition-colors flex items-center gap-2 whitespace-nowrap"
+                  >
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    Search
+                  </button>
                 </div>
               </div>
-              {error && (
-                <p className="text-red-400 text-xs mt-3 text-center">Something went wrong. Please try again.</p>
-              )}
-            </form>
-          )}
+            </div>
+          </form>
         </div>
       </div>
 
