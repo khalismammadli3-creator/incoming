@@ -17,10 +17,10 @@ export const metadata: Metadata = {
   title: `${destination.title} — ${destination.name}, Azerbaijan`,
   description: destination.description.slice(0, 160),
   openGraph: {
-    title: `${destination.title} | Azerbaijan Explorer`,
+    title: `${destination.title} | Lumivara Travel`,
     description: destination.tagline,
     images: [{ url: destination.image, width: 1200, height: 800, alt: destination.name }],
-    url: `https://azerbaijanexplorer.com/${destination.slug}`,
+    url: `https://lumivaratravel.com/${destination.slug}`,
   },
   twitter: {
     card: 'summary_large_image',
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     images: [destination.image],
   },
   alternates: {
-    canonical: `https://azerbaijanexplorer.com/${destination.slug}`,
+    canonical: `https://lumivaratravel.com/${destination.slug}`,
   },
 }
 
@@ -48,9 +48,9 @@ export default function GobustanPage() {
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://azerbaijanexplorer.com' },
-          { '@type': 'ListItem', position: 2, name: 'Destinations', item: 'https://azerbaijanexplorer.com/#tours' },
-          { '@type': 'ListItem', position: 3, name: destination.name, item: `https://azerbaijanexplorer.com/${destination.slug}` },
+          { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lumivaratravel.com' },
+          { '@type': 'ListItem', position: 2, name: 'Destinations', item: 'https://lumivaratravel.com/#tours' },
+          { '@type': 'ListItem', position: 3, name: destination.name, item: `https://lumivaratravel.com/${destination.slug}` },
         ],
       },
     ],

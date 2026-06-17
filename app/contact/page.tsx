@@ -3,7 +3,7 @@ import ContactForm from './ContactForm'
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Contact Azerbaijan Explorer to plan your perfect Azerbaijan tour. Reach us by phone, email, or WhatsApp.',
+  description: 'Contact Lumivara Travel to plan your perfect Azerbaijan tour. Reach us by phone, email, or WhatsApp.',
 }
 
 export default function ContactPage() {
@@ -49,8 +49,8 @@ export default function ContactPage() {
                     </svg>
                   ),
                   title: 'Email',
-                  value: 'info@azerbaijanexplorer.com',
-                  link: 'mailto:info@azerbaijanexplorer.com',
+                  value: 'info@lumivaratravel.com',
+                  link: 'mailto:info@lumivaratravel.com',
                 },
                 {
                   icon: (

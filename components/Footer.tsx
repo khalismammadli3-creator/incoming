@@ -93,7 +93,7 @@ export default function Footer() {
                 <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                info@azerbaijanexplorer.com
+                info@lumivaratravel.com
               </div>
               <div className="flex items-center gap-2 text-gray-400 text-sm">
                 <svg className="w-4 h-4 text-accent flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -107,7 +107,7 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} Azerbaijan Explorer. All rights reserved.
+            © {new Date().getFullYear()} Lumivara Travel. All rights reserved.
           </p>
           <p className="text-gray-500 text-sm">
             Made with ❤️ for the Land of Fire 🔥

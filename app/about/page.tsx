@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about Azerbaijan Explorer — our story, mission, and the passionate team behind your perfect Azerbaijan travel experience.',
+  description: 'Learn about Lumivara Travel — our story, mission, and the passionate team behind your perfect Azerbaijan travel experience.',
 }
 
 const teamMembers = [
@@ -22,7 +22,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Story</span>
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mt-3 mb-5">About Azerbaijan Explorer</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold text-white mt-3 mb-5">About Lumivara Travel</h1>
           <p className="text-blue-200 text-lg max-w-2xl mx-auto leading-relaxed">
             We are a team of passionate Azerbaijanis dedicated to sharing the extraordinary beauty, history, and culture of our homeland with the world.
           </p>
@@ -40,7 +40,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Founded in 2015 in Baku, Azerbaijan Explorer was born from a simple belief: that Azerbaijan deserves to be one of the world&apos;s great travel destinations. For too long, this remarkable country — with its fire temples, silk road history, Caucasus peaks and Caspian coast — remained hidden from the world.
+                  Founded in 2015 in Baku, Lumivara Travel was born from a simple belief: that Azerbaijan deserves to be one of the world&apos;s great travel destinations. For too long, this remarkable country — with its fire temples, silk road history, Caucasus peaks and Caspian coast — remained hidden from the world.
                 </p>
                 <p>
                   We set out to change that. Today, we&apos;ve guided over 10,000 travellers from 60+ countries on unforgettable journeys across Azerbaijan. Every tour we design goes beyond tourist highlights — we connect our guests with local families, ancient traditions, and hidden landscapes that most visitors never see.
