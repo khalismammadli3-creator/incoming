@@ -15,12 +15,13 @@ export default function InquiryForm() {
 
   const [destination, setDestination] = useState('')
   const [travelDate, setTravelDate] = useState('')
-  const [travelers, setTravelers] = useState('2')
+  const [travelers, setTravelers] = useState('')
 
   useEffect(() => {
     if (params.get('destination')) setDestination(params.get('destination')!)
     if (params.get('date')) setTravelDate(params.get('date')!)
-    if (params.get('travelers')) setTravelers(params.get('travelers')!)
+    const t = params.get('travelers')
+    if (t && t !== '10+') setTravelers(t)
   }, [params])
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -102,7 +103,8 @@ export default function InquiryForm() {
           <div>
             <label className={labelClass}>Number of Travelers *</label>
             <select name="travelers" value={travelers} onChange={(e) => setTravelers(e.target.value)} required className={inputClass}>
-              {[1,2,3,4,5,6,7,8,9,10].map((n) => (
+              <option value="">Select number of travelers</option>
+              {[1,2,3,4,5,6,7,8,9].map((n) => (
                 <option key={n} value={n}>{n} {n === 1 ? 'Traveler' : 'Travelers'}</option>
               ))}
               <option value="11-20">11–20 Travelers</option>

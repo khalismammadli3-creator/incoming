@@ -111,9 +111,10 @@ export default function HeroSection() {
                     onChange={(e) => setTravelers(e.target.value)}
                     className="flex-1 bg-white/15 border border-white/30 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-accent"
                   >
-                    {[1,2,3,4,5,6,7,8,9,10].map((n) => (
+                    {[1,2,3,4,5,6,7,8,9].map((n) => (
                       <option key={n} value={n} className="text-gray-900">{n} {n === 1 ? 'Traveler' : 'Travelers'}</option>
                     ))}
+                    <option value="10+" className="text-gray-900">10+ Travelers</option>
                   </select>
                   <button
                     type="submit"
