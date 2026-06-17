@@ -87,7 +87,8 @@ export default function HeroSection() {
                 type="date"
                 value={travelDate}
                 onChange={(e) => setTravelDate(e.target.value)}
-                className="bg-white/15 border border-white/30 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-accent"
+                onClick={(e) => (e.currentTarget as HTMLInputElement).showPicker?.()}
+                className="bg-white/15 border border-white/30 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-accent cursor-pointer w-full"
               />
             </div>
             <div className="flex flex-col gap-1">
