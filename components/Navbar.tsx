@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useTheme } from './ThemeProvider'
 import { destinations } from '@/lib/destinations'
@@ -10,6 +10,15 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const [destinationsOpen, setDestinationsOpen] = useState(false)
+  const closeTimer = useRef<NodeJS.Timeout | null>(null)
+
+  const openDestinations = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current)
+    setDestinationsOpen(true)
+  }
+  const closeDestinations = () => {
+    closeTimer.current = setTimeout(() => setDestinationsOpen(false), 150)
+  }
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -50,8 +59,8 @@ export default function Navbar() {
             {/* Destinations Dropdown */}
             <div
               className="relative"
-              onMouseEnter={() => setDestinationsOpen(true)}
-              onMouseLeave={() => setDestinationsOpen(false)}
+              onMouseEnter={openDestinations}
+              onMouseLeave={closeDestinations}
             >
               <button
                 className={`flex items-center gap-1 font-medium transition-colors hover:text-accent ${
@@ -64,7 +73,8 @@ export default function Navbar() {
                 </svg>
               </button>
               {destinationsOpen && (
-                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-2xl border border-gray-100 py-2 grid grid-cols-1 gap-0">
+                <div className="absolute top-full left-0 pt-2 w-64">
+                  <div className="bg-white rounded-xl shadow-2xl border border-gray-100 py-2 grid grid-cols-1 gap-0">
                   {destinations.map((dest) => (
                     <Link
                       key={dest.slug}
@@ -76,6 +86,7 @@ export default function Navbar() {
                       <span className="ml-auto text-xs text-gray-400">{dest.category}</span>
                     </Link>
                   ))}
+                  </div>
                 </div>
               )}
             </div>
