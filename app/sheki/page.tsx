@@ -30,7 +30,7 @@ export default function ShekiPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
-      { '@type': 'TouristTrip', name: destination.title, description: destination.description, image: destination.image, offers: { '@type': 'Offer', price: destination.price.replace('$', ''), priceCurrency: 'USD' }, touristType: destination.category },
+      { '@type': 'TouristTrip', name: destination.title, description: destination.description, image: destination.image, touristType: destination.category },
       { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lumivaratravel.com' }, { '@type': 'ListItem', position: 2, name: 'Destinations', item: 'https://lumivaratravel.com/#tours' }, { '@type': 'ListItem', position: 3, name: destination.name, item: `https://lumivaratravel.com/${destination.slug}` }] },
     ],
   }

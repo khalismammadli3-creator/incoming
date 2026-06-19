@@ -42,7 +42,6 @@ export default function GobustanPage() {
         name: destination.title,
         description: destination.description,
         image: destination.image,
-        offers: { '@type': 'Offer', price: destination.price.replace('$', ''), priceCurrency: 'USD' },
         touristType: destination.category,
       },
       {

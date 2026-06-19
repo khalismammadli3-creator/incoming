@@ -31,11 +31,6 @@ export default function StickyBookingBar({ destination }: StickyBookingBarProps)
               <div className="font-bold text-gray-900">{destination.title}</div>
               <div className="text-gray-500 text-sm">{destination.duration}</div>
             </div>
-            <div className="hidden sm:block h-10 w-px bg-gray-200" />
-            <div className="hidden sm:block">
-              <div className="text-xs text-gray-500">From</div>
-              <div className="font-bold text-accent text-xl">{destination.price}<span className="text-sm text-gray-400 font-normal">/person</span></div>
-            </div>
           </div>
 
           <div className="flex items-center gap-3 w-full sm:w-auto">

@@ -31,7 +31,7 @@ export const destinations: Destination[] = [
     itinerary:
       'Day 1: Arrive in Baku, check in, evening stroll along Baku Boulevard and Flame Towers light show. Day 2: Explore Icherisheher (Old City) — Maiden Tower, Palace of the Shirvanshahs, caravanserais and bazaars. Day 3: Modern Baku — Heydar Aliyev Center (Zaha Hadid), Upland Park panorama, Little Venice. Day 4: Day trip to Bibi-Heybat Mosque, Highland Park, Nizami Street shopping. Day 5: Free morning, departure.',
     duration: '5 Days / 4 Nights',
-    price: '$450',
+    price: '',
     difficulty: 'Easy',
     highlights: [
       'Icherisheher UNESCO World Heritage Old City',
@@ -100,7 +100,7 @@ export const destinations: Destination[] = [
     itinerary:
       'Day 1: Depart Baku, visit Gobustan National Park museum, explore rock engravings on guided trail. Afternoon: Drive to Absheron mud volcanoes — witness the bubbling landscape. Evening: Return to Baku. Day 2: Optional flamingo watching at Gobustan coastline, traditional lunch at local restaurant.',
     duration: '2 Days / 1 Night',
-    price: '$180',
+    price: '',
     difficulty: 'Moderate',
     highlights: [
       'UNESCO World Heritage rock engravings',
@@ -162,7 +162,7 @@ export const destinations: Destination[] = [
     itinerary:
       'Day 1: Depart Baku by train or car, arrive Sheki, check in at a caravanserai hotel. Evening stroll through the old bazaar. Day 2: Palace of the Sheki Khans, Sheki Fortress, Albanian church ruins. Traditional crafts workshop (shebeke glass). Day 3: Hike in Sheki forests, visit local silk factory, farewell dinner with Sheki piti (lamb stew). Day 4: Return to Baku.',
     duration: '4 Days / 3 Nights',
-    price: '$320',
+    price: '',
     difficulty: 'Easy',
     highlights: [
       'Palace of the Sheki Khans (UNESCO)',
@@ -225,7 +225,7 @@ export const destinations: Destination[] = [
     itinerary:
       'Day 1: Arrive Gabala, check in resort, evening at Nohur Lake. Day 2: Tufandag cable car ascent, panoramic Caucasus views, forest hiking trails. Day 3: Adventure activities — zip-line, archery, ATV rides in the mountains. Day 4: Visit Yeddi Gozel (Seven Beauties) waterfall, Gabala Archaeological Centre. Day 5: Return to Baku.',
     duration: '5 Days / 4 Nights',
-    price: '$520',
+    price: '',
     difficulty: 'Moderate',
     highlights: [
       'Tufandag cable car and ski resort',
@@ -289,7 +289,7 @@ export const destinations: Destination[] = [
     itinerary:
       'Day 1: Depart Baku early, drive via Quba, ascend mountain road to Khinalig (approximately 5–6 hours). Arrive, check in guesthouse, walk the village streets. Day 2: Full village immersion — visit ancient mosque, meet local craftspeople, shepherd interactions. Hike to valley viewpoint. Day 3: Morning hike, traditional breakfast, descend to Quba for lunch, return to Baku.',
     duration: '3 Days / 2 Nights',
-    price: '$280',
+    price: '',
     difficulty: 'Challenging',
     highlights: [
       'Europe\'s highest permanently inhabited village',
@@ -351,7 +351,7 @@ export const destinations: Destination[] = [
     itinerary:
       'Day 1: Arrive Quba, visit Krasnaya Sloboda (Red Settlement Jewish village), explore Quba city centre and mosque. Day 2: Drive to Afurja waterfall (170m high), hike forest trails, picnic lunch by the waterfall. Day 3: Visit apple orchards (seasonal), Tenghe canyon, return to Baku.',
     duration: '3 Days / 2 Nights',
-    price: '$240',
+    price: '',
     difficulty: 'Easy',
     highlights: [
       'Krasnaya Sloboda — unique Jewish heritage village',
@@ -408,7 +408,7 @@ export const destinations: Destination[] = [
     itinerary:
       'Day 1: Depart Baku, drive via Ismailli (2.5 hrs), scenic mountain road to Lahij. Check in boutique guesthouse, evening walk through craft lanes. Day 2: Full village day — copper workshop visits, try your hand at engraving, local herb market, waterfall hike in surrounding mountains. Day 3: Morning photography, traditional breakfast, return to Baku.',
     duration: '3 Days / 2 Nights',
-    price: '$220',
+    price: '',
     difficulty: 'Easy',
     highlights: [
       'Living copper craftsmanship tradition',
@@ -466,7 +466,7 @@ export const destinations: Destination[] = [
     itinerary:
       'Day 1: Arrive Ganja, visit Nizami Ganjavi Mausoleum, Ganja State History Museum. Explore old city streets. Day 2: Imamzadeh religious complex, the famous Bottle House (a unique house built from 48,000 bottles), Ganja Gate archaeological site. Day 3: Goygol National Park day trip — one of the most pristine alpine lakes in the Caucasus. Day 4: Return to Baku.',
     duration: '4 Days / 3 Nights',
-    price: '$290',
+    price: '',
     difficulty: 'Easy',
     highlights: [
       'Mausoleum of Nizami Ganjavi',
@@ -524,7 +524,7 @@ export const destinations: Destination[] = [
     itinerary:
       'Day 1: Depart Baku, arrive Lankaran (4 hrs), check in, stroll Lankaran fortress and seafront. Day 2: Hirkan National Park guided trekking — ancient Hyrcanian forest, rare flora and fauna. Picnic lunch in the forest. Day 3: Masalli tea plantation tour, Lerik longevity village (home to many centenarians), sunset at Caspian shore. Day 4: Fresh fish breakfast, return to Baku.',
     duration: '4 Days / 3 Nights',
-    price: '$310',
+    price: '',
     difficulty: 'Moderate',
     highlights: [
       'Hirkan National Park (UNESCO Biosphere Reserve)',
@@ -581,7 +581,7 @@ export const destinations: Destination[] = [
     itinerary:
       'Day 1: Ateshgah Fire Temple — explore the ancient caravanserai and fire altars. Drive to Yanar Dag — witness the hillside that has burned for over 65 years. Visit Mardakan Octagonal Tower and Round Tower (14th-century castles). Sunset picnic at Absheron coastline. Day 2: Bibi-Heybat Mosque and Absheron oil heritage sites. Return to Baku.',
     duration: '2 Days / 1 Night',
-    price: '$160',
+    price: '',
     difficulty: 'Easy',
     highlights: [
       'Ateshgah Zoroastrian Fire Temple',

@@ -48,10 +48,6 @@ export default function DestinationCard({ destination }: DestinationCardProps) {
               </h3>
               <p className="text-gray-500 text-sm mt-0.5">{destination.region}</p>
             </div>
-            <div className="text-right flex-shrink-0 ml-4">
-              <div className="text-xs text-gray-400">From</div>
-              <div className="font-bold text-accent text-lg">{destination.price}</div>
-            </div>
           </div>
 
           <p className="text-gray-600 text-sm leading-relaxed line-clamp-2 mb-4">
