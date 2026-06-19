@@ -39,7 +39,7 @@ export default function ContactPage() {
                     </svg>
                   ),
                   title: 'Phone & WhatsApp',
-                  value: '+994 50 123 45 67',
+                  value: '+994 10 237 21 21',
                   link: 'https://wa.me/994102372121',
                 },
                 {
