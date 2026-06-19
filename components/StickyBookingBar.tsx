@@ -35,7 +35,7 @@ export default function StickyBookingBar({ destination }: StickyBookingBarProps)
 
           <div className="flex items-center gap-3 w-full sm:w-auto">
             <a
-              href={`https://wa.me/994501234567?text=Hi%2C%20I%27d%20like%20to%20book%20the%20${encodeURIComponent(destination.title)}`}
+              href={`https://wa.me/994102372121?text=Hi%2C%20I%27d%20like%20to%20book%20the%20${encodeURIComponent(destination.title)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 sm:flex-none bg-accent text-primary px-8 py-3 rounded-full font-bold hover:bg-accent-hover transition-colors text-center"

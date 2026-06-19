@@ -91,7 +91,7 @@ export default function DestinationOverview({ destination }: DestinationOverview
               </div>
 
               <a
-                href={`https://wa.me/994501234567?text=Hi%2C%20I%27d%20like%20to%20book%20the%20${encodeURIComponent(destination.title)}`}
+                href={`https://wa.me/994102372121?text=Hi%2C%20I%27d%20like%20to%20book%20the%20${encodeURIComponent(destination.title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 w-full bg-accent text-primary py-3.5 rounded-xl font-bold text-center hover:bg-accent-hover transition-colors flex items-center justify-center gap-2"

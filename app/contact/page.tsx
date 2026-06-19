@@ -40,7 +40,7 @@ export default function ContactPage() {
                   ),
                   title: 'Phone & WhatsApp',
                   value: '+994 50 123 45 67',
-                  link: 'https://wa.me/994501234567',
+                  link: 'https://wa.me/994102372121',
                 },
                 {
                   icon: (
@@ -79,7 +79,7 @@ export default function ContactPage() {
 
               {/* WhatsApp CTA */}
               <a
-                href="https://wa.me/994501234567?text=Hi%2C%20I%27d%20like%20to%20book%20a%20tour%20to%20Azerbaijan"
+                href="https://wa.me/994102372121?text=Hi%2C%20I%27d%20like%20to%20book%20a%20tour%20to%20Azerbaijan"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 bg-green-500 text-white px-6 py-4 rounded-2xl font-semibold hover:bg-green-600 transition-colors shadow-lg"
