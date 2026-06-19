@@ -1,5 +1,4 @@
 import HeroSection from '@/components/HeroSection'
-import SearchSection from '@/components/SearchSection'
 import FeaturedToursSection from '@/components/FeaturedToursSection'
 import WhyAzerbaijanSection from '@/components/WhyAzerbaijanSection'
 import TestimonialsSection from '@/components/TestimonialsSection'
@@ -10,7 +9,6 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <SearchSection />
       <FeaturedToursSection />
       <WhyAzerbaijanSection />
       <TestimonialsSection />
