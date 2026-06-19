@@ -2,8 +2,15 @@ import { Metadata } from 'next'
 import ContactForm from './ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contact Us',
-  description: 'Contact Lumivara Travel to plan your perfect Azerbaijan tour. Reach us by phone, email, or WhatsApp.',
+  title: 'Contact Us | Lumivara Travel — Azerbaijan DMC',
+  description: 'Get in touch with Lumivara Travel, Azerbaijan\'s destination management company. Reach our Baku-based team by phone, WhatsApp or email to plan your group tour, incentive travel or MICE event in Azerbaijan.',
+  alternates: { canonical: 'https://incoming.lumivaratravel.az/contact/' },
+  openGraph: {
+    title: 'Contact Lumivara Travel | Azerbaijan DMC & Incoming Agency',
+    description: 'Contact our Baku-based team to plan bespoke Azerbaijan tours, group travel, MICE events and incentive programmes for international operators.',
+    url: 'https://incoming.lumivaratravel.az/contact/',
+    images: [{ url: '/images/hero.webp', width: 1920, height: 1080, alt: 'Contact Lumivara Travel — Azerbaijan destination management company' }],
+  },
 }
 
 export default function ContactPage() {

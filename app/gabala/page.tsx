@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import { destinations } from '@/lib/destinations'
 import DestinationHero from '@/components/DestinationHero'
 import DestinationOverview from '@/components/DestinationOverview'
@@ -14,11 +14,17 @@ import BookingCTASection from '@/components/BookingCTASection'
 const destination = destinations.find((d) => d.slug === 'gabala')!
 
 export const metadata: Metadata = {
-  title: `${destination.title} — ${destination.name}, Azerbaijan`,
-  description: destination.description.slice(0, 160),
-  openGraph: { title: `${destination.title} | Lumivara Travel`, description: destination.tagline, images: [{ url: destination.image, width: 1200, height: 800, alt: destination.name }], url: `https://lumivaratravel.com/${destination.slug}` },
-  twitter: { card: 'summary_large_image', title: destination.title, description: destination.tagline, images: [destination.image] },
-  alternates: { canonical: `https://lumivaratravel.com/${destination.slug}` },
+  title: 'Gabala Mountain Adventure Tours | Caucasus | Lumivara Travel',
+  description: "Experience Azerbaijan's adventure capital with Lumivara Travel. Cable cars, hiking, zip-lining and Caucasus mountain scenery in Gabala — programmes for leisure groups, corporate and incentive travel.",
+  keywords: ['Azerbaijan DMC', 'destination management company Azerbaijan', 'incoming travel agency Azerbaijan', 'tours to Azerbaijan', 'gabala Azerbaijan', 'Baku tour operator', 'MICE Azerbaijan', 'incentive travel Azerbaijan'],
+  openGraph: {
+    title: 'Gabala Adventure Tours | Azerbaijan DMC | Lumivara Travel',
+    description: 'Caucasus mountain adventures in Gabala — cable cars, zip-lining, hiking and Nohur Lake. Lumivara Travel arranges group and incentive travel programmes in Azerbaijan.',
+    images: [{ url: '/images/hero.webp', width: 1920, height: 1080, alt: 'Gabala, Azerbaijan — Tufandag mountain resort and Caucasus scenery, Lumivara Travel' }],
+    url: 'https://incoming.lumivaratravel.az/gabala/',
+  },
+  twitter: { card: 'summary_large_image', title: 'Gabala Adventure Tours | Azerbaijan DMC | Lumivara Travel', description: 'Caucasus mountain adventures in Gabala — cable cars, zip-lining, hiking and Nohur Lake. Lumivara Travel arranges group and incentive travel programmes in Azerbaijan.', images: ['/images/hero.webp'] },
+  alternates: { canonical: 'https://incoming.lumivaratravel.az/gabala/' },
 }
 
 export default function GabalaPage() {
@@ -26,7 +32,7 @@ export default function GabalaPage() {
     '@context': 'https://schema.org',
     '@graph': [
       { '@type': 'TouristTrip', name: destination.title, description: destination.description, image: destination.image, touristType: destination.category },
-      { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lumivaratravel.com' }, { '@type': 'ListItem', position: 2, name: 'Destinations', item: 'https://lumivaratravel.com/#tours' }, { '@type': 'ListItem', position: 3, name: destination.name, item: `https://lumivaratravel.com/${destination.slug}` }] },
+      { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://incoming.lumivaratravel.az' }, { '@type': 'ListItem', position: 2, name: 'Destinations', item: 'https://incoming.lumivaratravel.az/#tours' }, { '@type': 'ListItem', position: 3, name: destination.name, item: `https://incoming.lumivaratravel.az/${destination.slug}` }] },
     ],
   }
   return (

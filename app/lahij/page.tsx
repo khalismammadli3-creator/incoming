@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import { destinations } from '@/lib/destinations'
 import DestinationHero from '@/components/DestinationHero'
 import DestinationOverview from '@/components/DestinationOverview'
@@ -14,11 +14,17 @@ import BookingCTASection from '@/components/BookingCTASection'
 const destination = destinations.find((d) => d.slug === 'lahij')!
 
 export const metadata: Metadata = {
-  title: `${destination.title} — ${destination.name}, Azerbaijan`,
-  description: destination.description.slice(0, 160),
-  openGraph: { title: `${destination.title} | Lumivara Travel`, description: destination.tagline, images: [{ url: destination.image, width: 1200, height: 800, alt: destination.name }], url: `https://lumivaratravel.com/${destination.slug}` },
-  twitter: { card: 'summary_large_image', title: destination.title, description: destination.tagline, images: [destination.image] },
-  alternates: { canonical: `https://lumivaratravel.com/${destination.slug}` },
+  title: 'Lahij Cultural Heritage Tour | Copper Craft Village | Lumivara Travel',
+  description: "Explore Lahij — Azerbaijan's medieval copper-craft village in the Ismailli mountains. Lumivara Travel designs curated cultural heritage tours for international groups and travel operators.",
+  keywords: ['Azerbaijan DMC', 'destination management company Azerbaijan', 'incoming travel agency Azerbaijan', 'tours to Azerbaijan', 'lahij Azerbaijan', 'Baku tour operator', 'MICE Azerbaijan', 'incentive travel Azerbaijan'],
+  openGraph: {
+    title: 'Lahij Heritage Tours | Azerbaijan DMC | Lumivara Travel',
+    description: 'Medieval cobblestone streets and living copper-craft traditions — Lumivara Travel arranges Lahij cultural tours for international groups visiting Azerbaijan.',
+    images: [{ url: '/images/hero.webp', width: 1920, height: 1080, alt: 'Lahij village, Azerbaijan — medieval copper crafts and cobblestone streets, Lumivara Travel' }],
+    url: 'https://incoming.lumivaratravel.az/lahij/',
+  },
+  twitter: { card: 'summary_large_image', title: 'Lahij Heritage Tours | Azerbaijan DMC | Lumivara Travel', description: 'Medieval cobblestone streets and living copper-craft traditions — Lumivara Travel arranges Lahij cultural tours for international groups visiting Azerbaijan.', images: ['/images/hero.webp'] },
+  alternates: { canonical: 'https://incoming.lumivaratravel.az/lahij/' },
 }
 
 export default function LahijPage() {
@@ -26,7 +32,7 @@ export default function LahijPage() {
     '@context': 'https://schema.org',
     '@graph': [
       { '@type': 'TouristTrip', name: destination.title, description: destination.description, image: destination.image, touristType: destination.category },
-      { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lumivaratravel.com' }, { '@type': 'ListItem', position: 2, name: 'Destinations', item: 'https://lumivaratravel.com/#tours' }, { '@type': 'ListItem', position: 3, name: destination.name, item: `https://lumivaratravel.com/${destination.slug}` }] },
+      { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://incoming.lumivaratravel.az' }, { '@type': 'ListItem', position: 2, name: 'Destinations', item: 'https://incoming.lumivaratravel.az/#tours' }, { '@type': 'ListItem', position: 3, name: destination.name, item: `https://incoming.lumivaratravel.az/${destination.slug}` }] },
     ],
   }
   return (

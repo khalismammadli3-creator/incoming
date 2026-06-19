@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import { destinations } from '@/lib/destinations'
 import DestinationHero from '@/components/DestinationHero'
 import DestinationOverview from '@/components/DestinationOverview'
@@ -14,16 +14,17 @@ import BookingCTASection from '@/components/BookingCTASection'
 const destination = destinations.find((d) => d.slug === 'sheki')!
 
 export const metadata: Metadata = {
-  title: `${destination.title} — ${destination.name}, Azerbaijan`,
-  description: destination.description.slice(0, 160),
+  title: 'Sheki Silk Road Tour | Palace of the Sheki Khans | Lumivara Travel',
+  description: "Discover Sheki — Azerbaijan's most enchanting Silk Road city. Lumivara Travel designs immersive group programmes featuring the UNESCO Palace of the Sheki Khans, historic caravanserais and craft workshops.",
+  keywords: ['Azerbaijan DMC', 'destination management company Azerbaijan', 'incoming travel agency Azerbaijan', 'tours to Azerbaijan', 'sheki Azerbaijan', 'Baku tour operator', 'MICE Azerbaijan', 'incentive travel Azerbaijan'],
   openGraph: {
-    title: `${destination.title} | Lumivara Travel`,
-    description: destination.tagline,
-    images: [{ url: destination.image, width: 1200, height: 800, alt: destination.name }],
-    url: `https://lumivaratravel.com/${destination.slug}`,
+    title: 'Sheki Silk Road Tours | Azerbaijan DMC | Lumivara Travel',
+    description: 'Immersive cultural programmes in Sheki — Silk Road heritage, the Palace of the Sheki Khans and traditional shebeke workshops for international groups.',
+    images: [{ url: '/images/hero.webp', width: 1920, height: 1080, alt: 'Sheki, Azerbaijan — Palace of the Sheki Khans and Silk Road heritage, Lumivara Travel DMC' }],
+    url: 'https://incoming.lumivaratravel.az/sheki/',
   },
-  twitter: { card: 'summary_large_image', title: destination.title, description: destination.tagline, images: [destination.image] },
-  alternates: { canonical: `https://lumivaratravel.com/${destination.slug}` },
+  twitter: { card: 'summary_large_image', title: 'Sheki Silk Road Tours | Azerbaijan DMC | Lumivara Travel', description: 'Immersive cultural programmes in Sheki — Silk Road heritage, the Palace of the Sheki Khans and traditional shebeke workshops for international groups.', images: ['/images/hero.webp'] },
+  alternates: { canonical: 'https://incoming.lumivaratravel.az/sheki/' },
 }
 
 export default function ShekiPage() {
@@ -31,7 +32,7 @@ export default function ShekiPage() {
     '@context': 'https://schema.org',
     '@graph': [
       { '@type': 'TouristTrip', name: destination.title, description: destination.description, image: destination.image, touristType: destination.category },
-      { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lumivaratravel.com' }, { '@type': 'ListItem', position: 2, name: 'Destinations', item: 'https://lumivaratravel.com/#tours' }, { '@type': 'ListItem', position: 3, name: destination.name, item: `https://lumivaratravel.com/${destination.slug}` }] },
+      { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://incoming.lumivaratravel.az' }, { '@type': 'ListItem', position: 2, name: 'Destinations', item: 'https://incoming.lumivaratravel.az/#tours' }, { '@type': 'ListItem', position: 3, name: destination.name, item: `https://incoming.lumivaratravel.az/${destination.slug}` }] },
     ],
   }
   return (

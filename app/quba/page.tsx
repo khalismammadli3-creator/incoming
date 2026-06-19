@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import { destinations } from '@/lib/destinations'
 import DestinationHero from '@/components/DestinationHero'
 import DestinationOverview from '@/components/DestinationOverview'
@@ -14,11 +14,17 @@ import BookingCTASection from '@/components/BookingCTASection'
 const destination = destinations.find((d) => d.slug === 'quba')!
 
 export const metadata: Metadata = {
-  title: `${destination.title} — ${destination.name}, Azerbaijan`,
-  description: destination.description.slice(0, 160),
-  openGraph: { title: `${destination.title} | Lumivara Travel`, description: destination.tagline, images: [{ url: destination.image, width: 1200, height: 800, alt: destination.name }], url: `https://lumivaratravel.com/${destination.slug}` },
-  twitter: { card: 'summary_large_image', title: destination.title, description: destination.tagline, images: [destination.image] },
-  alternates: { canonical: `https://lumivaratravel.com/${destination.slug}` },
+  title: 'Quba Nature and Heritage Tour | Northern Azerbaijan | Lumivara Travel',
+  description: "Discover Quba's apple orchards, Afurja waterfall and the unique Krasnaya Sloboda Jewish heritage village. Lumivara Travel organises tailored group tours to northern Azerbaijan for international operators.",
+  keywords: ['Azerbaijan DMC', 'destination management company Azerbaijan', 'incoming travel agency Azerbaijan', 'tours to Azerbaijan', 'quba Azerbaijan', 'Baku tour operator', 'MICE Azerbaijan', 'incentive travel Azerbaijan'],
+  openGraph: {
+    title: 'Quba Tours | Northern Azerbaijan DMC | Lumivara Travel',
+    description: 'Apple orchards, Afurja waterfall and Jewish heritage in Krasnaya Sloboda — Lumivara Travel designs Quba group tours for international operators and FIT travellers.',
+    images: [{ url: '/images/hero.webp', width: 1920, height: 1080, alt: 'Quba, northern Azerbaijan — apple orchards and mountain scenery, Lumivara Travel DMC' }],
+    url: 'https://incoming.lumivaratravel.az/quba/',
+  },
+  twitter: { card: 'summary_large_image', title: 'Quba Tours | Northern Azerbaijan DMC | Lumivara Travel', description: 'Apple orchards, Afurja waterfall and Jewish heritage in Krasnaya Sloboda — Lumivara Travel designs Quba group tours for international operators and FIT travellers.', images: ['/images/hero.webp'] },
+  alternates: { canonical: 'https://incoming.lumivaratravel.az/quba/' },
 }
 
 export default function QubaPage() {
@@ -26,7 +32,7 @@ export default function QubaPage() {
     '@context': 'https://schema.org',
     '@graph': [
       { '@type': 'TouristTrip', name: destination.title, description: destination.description, image: destination.image, touristType: destination.category },
-      { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://lumivaratravel.com' }, { '@type': 'ListItem', position: 2, name: 'Destinations', item: 'https://lumivaratravel.com/#tours' }, { '@type': 'ListItem', position: 3, name: destination.name, item: `https://lumivaratravel.com/${destination.slug}` }] },
+      { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: 'https://incoming.lumivaratravel.az' }, { '@type': 'ListItem', position: 2, name: 'Destinations', item: 'https://incoming.lumivaratravel.az/#tours' }, { '@type': 'ListItem', position: 3, name: destination.name, item: `https://incoming.lumivaratravel.az/${destination.slug}` }] },
     ],
   }
   return (

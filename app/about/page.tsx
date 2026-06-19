@@ -3,8 +3,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description: 'Learn about Lumivara Travel — our story, mission, and the passionate team behind your perfect Azerbaijan travel experience.',
+  title: 'About Lumivara Travel | Azerbaijan Destination Management Company',
+  description: 'Lumivara Travel is a boutique Azerbaijan DMC founded in Baku in 2025 by local experts. We design bespoke tours, group itineraries and MICE programmes for international travel operators across the Land of Fire.',
+  alternates: { canonical: 'https://incoming.lumivaratravel.az/about/' },
+  openGraph: {
+    title: 'About Lumivara Travel | Azerbaijan Destination Management Company',
+    description: 'Founded in 2025 by local Azerbaijani experts, Lumivara Travel designs bespoke tours, incentive travel and MICE programmes for international operators.',
+    url: 'https://incoming.lumivaratravel.az/about/',
+    images: [{ url: '/images/hero.webp', width: 1920, height: 1080, alt: 'Lumivara Travel — Azerbaijan DMC team and destinations' }],
+  },
 }
 
 const teamMembers = [

@@ -14,7 +14,7 @@ export default function DestinationCard({ destination }: DestinationCardProps) {
         <div className="relative h-52 overflow-hidden">
           <Image
             src={destination.image}
-            alt={destination.name}
+            alt={`${destination.name}, Azerbaijan — ${destination.tagline} | Lumivara Travel`}
             fill
             className="object-cover group-hover:scale-105 transition-transform duration-500"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

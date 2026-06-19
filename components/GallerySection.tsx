@@ -21,7 +21,7 @@ export default function GallerySection({ destination }: GallerySectionProps) {
           <div className="col-span-2 row-span-2 relative h-72 md:h-auto rounded-2xl overflow-hidden group">
             <Image
               src={destination.gallery[0]}
-              alt={`${destination.name} gallery 1`}
+              alt={`${destination.name}, Azerbaijan — travel photography | Lumivara Travel DMC`}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -34,7 +34,7 @@ export default function GallerySection({ destination }: GallerySectionProps) {
             <div key={idx} className="relative h-36 md:h-48 rounded-2xl overflow-hidden group">
               <Image
                 src={img}
-                alt={`${destination.name} gallery ${idx + 2}`}
+                alt={`${destination.name} — ${destination.region}, Azerbaijan | Lumivara Travel`}
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 768px) 50vw, 25vw"

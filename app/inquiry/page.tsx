@@ -3,8 +3,15 @@ import { Suspense } from 'react'
 import InquiryForm from './InquiryForm'
 
 export const metadata: Metadata = {
-  title: 'Travel Inquiry',
-  description: 'Submit a detailed travel inquiry to Lumivara Incoming. Tell us about your group, dates, and preferences and we will craft a personalised Azerbaijan itinerary for you.',
+  title: 'Request a Proposal | Lumivara Travel — Azerbaijan DMC',
+  description: 'Submit a travel inquiry to Lumivara Travel\'s Azerbaijan DMC team. Tell us your group size, travel dates and interests — we\'ll send a tailored itinerary and proposal within 24 hours.',
+  alternates: { canonical: 'https://incoming.lumivaratravel.az/inquiry/' },
+  openGraph: {
+    title: 'Request an Azerbaijan Travel Proposal | Lumivara Travel DMC',
+    description: 'Submit your group travel inquiry to our Azerbaijan DMC. Bespoke itineraries for leisure groups, corporate travel, MICE and incentive programmes.',
+    url: 'https://incoming.lumivaratravel.az/inquiry/',
+    images: [{ url: '/images/hero.webp', width: 1920, height: 1080, alt: 'Azerbaijan travel inquiry — Lumivara Travel destination management company' }],
+  },
 }
 
 export default function InquiryPage() {
