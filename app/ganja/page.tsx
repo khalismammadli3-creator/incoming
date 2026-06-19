@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   keywords: ['Azerbaijan DMC', 'destination management company Azerbaijan', 'incoming travel agency Azerbaijan', 'tours to Azerbaijan', 'ganja Azerbaijan', 'Baku tour operator', 'MICE Azerbaijan', 'incentive travel Azerbaijan'],
   openGraph: {
     title: 'Ganja Historical Tours | Azerbaijan DMC | Lumivara Travel',
-    description: 'Explore Ganja's 2,500-year history and Goygol National Park — Lumivara Travel designs group and incentive travel programmes in western Azerbaijan.',
+    description: "Explore Ganja's 2,500-year history and Goygol National Park — Lumivara Travel designs group and incentive travel programmes in western Azerbaijan.",
     images: [{ url: '/images/hero.webp', width: 1920, height: 1080, alt: 'Ganja, Azerbaijan — Nizami Ganjavi mausoleum and historic city centre, Lumivara Travel DMC' }],
     url: 'https://incoming.lumivaratravel.az/ganja/',
   },
-  twitter: { card: 'summary_large_image', title: 'Ganja Historical Tours | Azerbaijan DMC | Lumivara Travel', description: 'Explore Ganja's 2,500-year history and Goygol National Park — Lumivara Travel designs group and incentive travel programmes in western Azerbaijan.', images: ['/images/hero.webp'] },
+  twitter: { card: 'summary_large_image', title: 'Ganja Historical Tours | Azerbaijan DMC | Lumivara Travel', description: "Explore Ganja's 2,500-year history and Goygol National Park — Lumivara Travel designs group and incentive travel programmes in western Azerbaijan.", images: ['/images/hero.webp'] },
   alternates: { canonical: 'https://incoming.lumivaratravel.az/ganja/' },
 }
 

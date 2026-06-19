@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   keywords: ['Azerbaijan DMC', 'destination management company Azerbaijan', 'incoming travel agency Azerbaijan', 'tours to Azerbaijan', 'khinalig Azerbaijan', 'Baku tour operator', 'MICE Azerbaijan', 'incentive travel Azerbaijan'],
   openGraph: {
     title: 'Khinalig Village Tour | Azerbaijan DMC | Lumivara Travel',
-    description: 'Journey to Khinalig — Europe's highest village in the Greater Caucasus. Authentic cultural immersion tours arranged by Lumivara Travel, Azerbaijan's incoming DMC.',
+    description: "Journey to Khinalig — Europe's highest village in the Greater Caucasus. Authentic cultural immersion tours arranged by Lumivara Travel, Azerbaijan's incoming DMC.",
     images: [{ url: '/images/hero.webp', width: 1920, height: 1080, alt: 'Khinalig village, Azerbaijan — stone houses in the Greater Caucasus at 2350m, Lumivara Travel' }],
     url: 'https://incoming.lumivaratravel.az/khinalig/',
   },
-  twitter: { card: 'summary_large_image', title: 'Khinalig Village Tour | Azerbaijan DMC | Lumivara Travel', description: 'Journey to Khinalig — Europe's highest village in the Greater Caucasus. Authentic cultural immersion tours arranged by Lumivara Travel, Azerbaijan's incoming DMC.', images: ['/images/hero.webp'] },
+  twitter: { card: 'summary_large_image', title: 'Khinalig Village Tour | Azerbaijan DMC | Lumivara Travel', description: "Journey to Khinalig — Europe's highest village in the Greater Caucasus. Authentic cultural immersion tours arranged by Lumivara Travel, Azerbaijan's incoming DMC.", images: ['/images/hero.webp'] },
   alternates: { canonical: 'https://incoming.lumivaratravel.az/khinalig/' },
 }
 
