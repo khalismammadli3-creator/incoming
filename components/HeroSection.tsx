@@ -45,16 +45,11 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 flex flex-col items-center text-center">
-        {/* Badge */}
-        <span className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 text-accent text-sm font-semibold px-4 py-1.5 rounded-full mb-6 backdrop-blur-sm">
-          <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-          Land of Fire — Azerbaijan
-        </span>
-
         {/* Headline */}
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-          Discover the Land of Fire —
-          <span className="block text-accent">Azerbaijan</span>
+          Discover
+          <span className="block text-accent">The Land of Fire</span>
+          <span className="block text-white">Azerbaijan</span>
         </h1>
         <p className="text-xl sm:text-2xl text-gray-200 max-w-2xl mb-10 leading-relaxed">
           From the medieval towers of Baku to the eternal flames of Absheron — explore the ancient, the dramatic, and the unforgettable.
