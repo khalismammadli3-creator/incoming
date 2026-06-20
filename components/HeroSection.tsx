@@ -53,7 +53,7 @@ export default function HeroSection() {
 
         {/* Headline */}
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-          Discover
+          Discover the Land of Fire —
           <span className="block text-accent">Azerbaijan</span>
         </h1>
         <p className="text-xl sm:text-2xl text-gray-200 max-w-2xl mb-10 leading-relaxed">

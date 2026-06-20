@@ -160,7 +160,7 @@ export default function AboutPage() {
               Browse Tours
             </Link>
             <Link href="/contact" className="border-2 border-accent text-accent px-8 py-4 rounded-full font-semibold hover:bg-accent hover:text-primary transition-colors">
-              Contact Us
+              Plan Your Trip
             </Link>
           </div>
         </div>

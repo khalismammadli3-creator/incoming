@@ -40,7 +40,7 @@ export default function StickyBookingBar({ destination }: StickyBookingBarProps)
               rel="noopener noreferrer"
               className="flex-1 sm:flex-none bg-accent text-primary px-8 py-3 rounded-full font-bold hover:bg-accent-hover transition-colors text-center"
             >
-              Book Now
+              Book via WhatsApp
             </a>
             <a
               href="/contact"

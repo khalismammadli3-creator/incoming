@@ -52,7 +52,7 @@ export default function FAQSection({ destination }: FAQSectionProps) {
             href="/contact"
             className="inline-flex items-center gap-2 bg-accent text-primary px-8 py-3.5 rounded-full font-bold hover:bg-accent-hover transition-colors"
           >
-            Contact Us
+            Ask Our Team
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>

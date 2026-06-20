@@ -15,8 +15,8 @@ const destination = destinations.find((d) => d.slug === 'khinalig')!
 
 export const metadata: Metadata = {
   title: 'Khinalig Village Tour | Caucasus Highlands | Lumivara Travel',
-  description: "Visit Khinalig — one of Europe's highest inhabited villages at 2,350m in the Greater Caucasus. Lumivara Travel arranges authentic cultural immersion tours for international groups and FIT travellers.",
-  keywords: ['Azerbaijan DMC', 'destination management company Azerbaijan', 'incoming travel agency Azerbaijan', 'tours to Azerbaijan', 'khinalig Azerbaijan', 'Baku tour operator', 'MICE Azerbaijan', 'incentive travel Azerbaijan'],
+  description: "Visit Khinalig — one of Europe's highest inhabited villages at 2,350m in the Greater Caucasus. Ideal for rock climbing and mountain trekking in Azerbaijan. Lumivara Travel arranges authentic cultural immersion tours for international groups and FIT travellers.",
+  keywords: ['Azerbaijan DMC', 'destination management company Azerbaijan', 'incoming travel agency Azerbaijan', 'tours to Azerbaijan', 'khinalig Azerbaijan', 'rock climbing Azerbaijan', 'mountain trekking Azerbaijan', 'Baku tour operator', 'MICE Azerbaijan', 'incentive travel Azerbaijan'],
   openGraph: {
     title: 'Khinalig Village Tour | Azerbaijan DMC | Lumivara Travel',
     description: "Journey to Khinalig — Europe's highest village in the Greater Caucasus. Authentic cultural immersion tours arranged by Lumivara Travel, Azerbaijan's incoming DMC.",

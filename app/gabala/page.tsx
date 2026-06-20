@@ -15,11 +15,11 @@ const destination = destinations.find((d) => d.slug === 'gabala')!
 
 export const metadata: Metadata = {
   title: 'Gabala Mountain Adventure Tours | Caucasus | Lumivara Travel',
-  description: "Experience Azerbaijan's adventure capital with Lumivara Travel. Cable cars, hiking, zip-lining and Caucasus mountain scenery in Gabala — programmes for leisure groups, corporate and incentive travel.",
-  keywords: ['Azerbaijan DMC', 'destination management company Azerbaijan', 'incoming travel agency Azerbaijan', 'tours to Azerbaijan', 'gabala Azerbaijan', 'Baku tour operator', 'MICE Azerbaijan', 'incentive travel Azerbaijan'],
+  description: "Experience Azerbaijan's adventure capital with Lumivara Travel. Ski packages at Tufandag, cable cars, zip-lining and Caucasus mountain scenery in Gabala — programmes for leisure groups, families, corporate and incentive travel.",
+  keywords: ['Azerbaijan DMC', 'destination management company Azerbaijan', 'incoming travel agency Azerbaijan', 'tours to Azerbaijan', 'gabala Azerbaijan', 'Shahdag ski packages', 'ski Azerbaijan', 'family tours Azerbaijan', 'Baku tour operator', 'MICE Azerbaijan', 'incentive travel Azerbaijan'],
   openGraph: {
     title: 'Gabala Adventure Tours | Azerbaijan DMC | Lumivara Travel',
-    description: 'Caucasus mountain adventures in Gabala — cable cars, zip-lining, hiking and Nohur Lake. Lumivara Travel arranges group and incentive travel programmes in Azerbaijan.',
+    description: 'Ski packages, cable cars, zip-lining and Caucasus mountain scenery in Gabala. Lumivara Travel arranges group, family and incentive travel programmes in Azerbaijan.',
     images: [{ url: '/images/hero.webp', width: 1920, height: 1080, alt: 'Gabala, Azerbaijan — Tufandag mountain resort and Caucasus scenery, Lumivara Travel' }],
     url: 'https://incoming.lumivaratravel.az/gabala/',
   },

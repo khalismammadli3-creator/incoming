@@ -30,7 +30,7 @@ export default function BookingCTASection() {
             href="/contact"
             className="border-2 border-accent text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-accent hover:text-primary transition-all duration-300"
           >
-            Contact Us
+            Speak to Our Team
           </Link>
         </div>
 

@@ -15,11 +15,11 @@ const destination = destinations.find((d) => d.slug === 'gobustan')!
 
 export const metadata: Metadata = {
   title: 'Gobustan Rock Art and Mud Volcanoes Tour | Lumivara Travel',
-  description: "Explore Gobustan National Park's UNESCO World Heritage petroglyphs and Azerbaijan's extraordinary mud volcanoes. Lumivara Travel arranges expert-guided day trips and group tours from Baku.",
-  keywords: ['Azerbaijan DMC', 'destination management company Azerbaijan', 'incoming travel agency Azerbaijan', 'tours to Azerbaijan', 'gobustan Azerbaijan', 'Baku tour operator', 'MICE Azerbaijan', 'incentive travel Azerbaijan'],
+  description: "Explore Gobustan National Park's UNESCO World Heritage petroglyphs and Azerbaijan's extraordinary mud volcanoes. A popular Gobustan day trip from Baku, expertly arranged by Lumivara Travel for international groups and operators.",
+  keywords: ['Azerbaijan DMC', 'destination management company Azerbaijan', 'incoming travel agency Azerbaijan', 'tours to Azerbaijan', 'gobustan Azerbaijan', 'Gobustan day trip from Baku', 'mud volcano tour Azerbaijan', 'Baku tour operator', 'MICE Azerbaijan', 'incentive travel Azerbaijan'],
   openGraph: {
     title: 'Gobustan UNESCO Tour | Azerbaijan DMC | Lumivara Travel',
-    description: '40,000-year-old rock engravings and bubbling mud volcanoes — Lumivara Travel arranges Gobustan group tours and day trips from Baku for international operators.',
+    description: '40,000-year-old rock engravings and mud volcano tour — Lumivara Travel arranges Gobustan day trips from Baku for international groups and operators.',
     images: [{ url: '/images/hero.webp', width: 1920, height: 1080, alt: 'Gobustan National Park, Azerbaijan — ancient rock engravings and mud volcanoes, Lumivara Travel' }],
     url: 'https://incoming.lumivaratravel.az/gobustan/',
   },
