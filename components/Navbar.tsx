@@ -101,6 +101,15 @@ export default function Navbar() {
             </Link>
 
             <Link
+              href="/visa-guide"
+              className={`font-medium transition-colors hover:text-accent ${
+                scrolled ? 'text-gray-700' : 'text-white'
+              }`}
+            >
+              Visa Guide
+            </Link>
+
+            <Link
               href="/contact"
               className={`font-medium transition-colors hover:text-accent ${
                 scrolled ? 'text-gray-700' : 'text-white'
@@ -203,6 +212,13 @@ export default function Navbar() {
               className="block py-2 text-gray-700 font-medium hover:text-accent"
             >
               About
+            </Link>
+            <Link
+              href="/visa-guide"
+              onClick={() => setMobileOpen(false)}
+              className="block py-2 text-gray-700 font-medium hover:text-accent"
+            >
+              Visa Guide
             </Link>
             <Link
               href="/contact"
