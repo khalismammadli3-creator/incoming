@@ -71,7 +71,7 @@ export default function VisaCostPage() {
                 { label: 'Government fee', value: '$20 USD', note: '' },
                 { label: 'ASAN service fee', value: '$9 USD', note: '' },
                 { label: 'Total official fee', value: '$29 USD', bold: true },
-                { label: 'Urgent processing (3 hours)', value: '$29 USD', note: 'Same fee — no surcharge' },
+                { label: 'Urgent processing (3 hours)', value: '$29 USD', note: 'Please verify the current urgent processing fee directly at evisa.gov.az as fees may vary' },
               ].map((item) => (
                 <div key={item.label} className={`flex items-center justify-between px-6 py-4 gap-4 ${item.bold ? 'bg-accent/5' : ''}`}>
                   <div>
