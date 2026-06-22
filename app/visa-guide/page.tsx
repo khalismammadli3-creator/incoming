@@ -211,6 +211,30 @@ export default function VisaGuidePage() {
           </Link>
         </section>
 
+        {/* Rejection reasons link */}
+        <section>
+          <span className="text-accent font-semibold text-sm uppercase tracking-wider">Rejection Guide</span>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-5">Visa Rejection Reasons</h2>
+          <p className="text-gray-600 mb-5 leading-relaxed">
+            Want to make sure your application is approved first time? Learn the most common reasons applications are rejected and how to avoid them.
+          </p>
+          <Link
+            href="/visa-guide/rejection-reasons"
+            className="flex items-center justify-between bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm hover:border-accent/40 hover:shadow-md transition-all group"
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">⚠️</span>
+              <div>
+                <p className="font-semibold text-gray-900 group-hover:text-accent transition-colors">Azerbaijan Visa Rejection Reasons — How to Avoid Denial</p>
+                <p className="text-sm text-gray-500">Common mistakes · What happens if rejected · How to reapply</p>
+              </div>
+            </div>
+            <svg className="w-5 h-5 text-gray-400 group-hover:text-accent transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </section>
+
         {/* Section 6 — CTA */}
         <section className="bg-primary rounded-2xl px-8 py-10 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Ready to Plan the Rest of Your Trip?</h2>

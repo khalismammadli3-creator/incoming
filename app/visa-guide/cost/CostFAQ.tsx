@@ -16,7 +16,7 @@ const faqs = [
   {
     question: 'Can I get a refund if my visa is rejected?',
     answer:
-      'No — the $29 USD Azerbaijan visa fee is non-refundable under all circumstances, including if your application is rejected or if you choose not to travel. Always double-check your passport details and photo before submitting your application.',
+      'Partially — if your application is rejected, the $9 USD ASAN service fee is refunded to your original payment method. However, the $20 USD government processing fee is non-refundable under any circumstances. If you choose not to travel after approval, neither portion is refunded. Always double-check your details before submitting.',
   },
   {
     question: 'Why do some websites charge $60–$130 for the Azerbaijan visa?',

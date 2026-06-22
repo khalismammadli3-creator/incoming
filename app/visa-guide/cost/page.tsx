@@ -146,7 +146,7 @@ export default function VisaCostPage() {
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Refund Policy</span>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-4">Is the Azerbaijan Visa Fee Refundable?</h2>
           <p className="text-gray-600 leading-relaxed">
-            No — the <strong>$29 USD Azerbaijan e-Visa fee is non-refundable</strong> under any circumstances. This applies even if your application is rejected, if you make an error in your application, or if you decide not to travel. Always carefully double-check your passport number, date of birth, travel dates, and passport photo before submitting your application at evisa.gov.az.
+            If your application is <strong>rejected</strong>, the <strong>$9 USD ASAN service fee is refunded</strong> to your original payment method. However, the <strong>$20 USD government processing fee is non-refundable</strong> under any circumstances — including rejection, errors in your application, or choosing not to travel. Always carefully double-check your passport number, date of birth, travel dates, and passport photo before submitting your application at evisa.gov.az.
           </p>
         </section>
 
