@@ -162,9 +162,16 @@ export default function VisaGuidePage() {
           </p>
           <div className="space-y-3">
             {[
+              { href: '/visa-guide/china', flag: '🇨🇳', title: 'Azerbaijan Visa for Chinese Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
               { href: '/visa-guide/india', flag: '🇮🇳', title: 'Azerbaijan Visa for Indian Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
+              { href: '/visa-guide/indonesia', flag: '🇮🇩', title: 'Azerbaijan Visa for Indonesian Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
+              { href: '/visa-guide/israel', flag: '🇮🇱', title: 'Azerbaijan Visa for Israeli Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
               { href: '/visa-guide/japan', flag: '🇯🇵', title: 'Azerbaijan Visa for Japanese Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
               { href: '/visa-guide/korea', flag: '🇰🇷', title: 'Azerbaijan Visa for South Korean Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
+              { href: '/visa-guide/malaysia', flag: '🇲🇾', title: 'Azerbaijan Visa for Malaysian Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
+              { href: '/visa-guide/pakistan', flag: '🇵🇰', title: 'Azerbaijan Visa for Pakistani Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
+              { href: '/visa-guide/thailand', flag: '🇹🇭', title: 'Azerbaijan Visa for Thai Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
+              { href: '/visa-guide/vietnam', flag: '🇻🇳', title: 'Azerbaijan Visa for Vietnamese Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
             ].map((item) => (
               <Link
                 key={item.href}

@@ -31,7 +31,25 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://incoming.lumivaratravel.az/visa-guide/china/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://incoming.lumivaratravel.az/visa-guide/india/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://incoming.lumivaratravel.az/visa-guide/indonesia/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://incoming.lumivaratravel.az/visa-guide/israel/</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -44,6 +62,30 @@
   </url>
   <url>
     <loc>https://incoming.lumivaratravel.az/visa-guide/korea/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://incoming.lumivaratravel.az/visa-guide/malaysia/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://incoming.lumivaratravel.az/visa-guide/pakistan/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://incoming.lumivaratravel.az/visa-guide/thailand/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://incoming.lumivaratravel.az/visa-guide/vietnam/</loc>
     <lastmod>2026-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
