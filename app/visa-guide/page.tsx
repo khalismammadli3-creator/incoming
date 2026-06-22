@@ -161,21 +161,28 @@ export default function VisaGuidePage() {
             Need country-specific visa information? We have detailed guides for common nationalities:
           </p>
           <div className="space-y-3">
-            <Link
-              href="/visa-guide/india"
-              className="flex items-center justify-between bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm hover:border-accent/40 hover:shadow-md transition-all group"
-            >
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">🇮🇳</span>
-                <div>
-                  <p className="font-semibold text-gray-900 group-hover:text-accent transition-colors">Azerbaijan Visa for Indian Citizens</p>
-                  <p className="text-gray-500 text-sm">$29 USD · Single entry · Up to 30 days · No visa on arrival</p>
+            {[
+              { href: '/visa-guide/india', flag: '🇮🇳', title: 'Azerbaijan Visa for Indian Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
+              { href: '/visa-guide/japan', flag: '🇯🇵', title: 'Azerbaijan Visa for Japanese Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
+              { href: '/visa-guide/korea', flag: '🇰🇷', title: 'Azerbaijan Visa for South Korean Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="flex items-center justify-between bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm hover:border-accent/40 hover:shadow-md transition-all group"
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">{item.flag}</span>
+                  <div>
+                    <p className="font-semibold text-gray-900 group-hover:text-accent transition-colors">{item.title}</p>
+                    <p className="text-gray-500 text-sm">{item.subtitle}</p>
+                  </div>
                 </div>
-              </div>
-              <svg className="w-5 h-5 text-gray-400 group-hover:text-accent transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
+                <svg className="w-5 h-5 text-gray-400 group-hover:text-accent transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            ))}
           </div>
         </section>
 

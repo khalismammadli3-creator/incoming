@@ -37,6 +37,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://incoming.lumivaratravel.az/visa-guide/japan/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://incoming.lumivaratravel.az/visa-guide/korea/</loc>
+    <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://incoming.lumivaratravel.az/baku/</loc>
     <lastmod>2025-06-19</lastmod>
     <changefreq>monthly</changefreq>
