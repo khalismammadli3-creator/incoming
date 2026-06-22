@@ -50,7 +50,7 @@ export default function AboutPage() {
                   Built from the ground up in 2025 by local experts who know Azerbaijan inside out, Lumivara Incoming was born from a simple belief: that Azerbaijan deserves to be one of the world&apos;s great travel destinations. This remarkable country — with its fire temples, silk road history, Caucasus peaks and Caspian coast — has long been one of the Caucasus&apos;s best-kept secrets, and we are here to change that.
                 </p>
                 <p>
-                  We set out to change that. Today, we&apos;ve guided over 10,000 travellers from 60+ countries on unforgettable journeys across Azerbaijan. Every tour we design goes beyond tourist highlights — we connect our guests with local families, ancient traditions, and hidden landscapes that most visitors never see.
+                  Founded in 2025, we set out to bring a fresh approach to travel in Azerbaijan — combining deep local knowledge with personalised service for every group and individual we work with.
                 </p>
                 <p>
                   Our guides are Azerbaijanis who grew up in the regions they lead. This means you get insights, stories, and access that no guidebook can provide.
@@ -66,25 +66,6 @@ export default function AboutPage() {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="py-16 bg-primary">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { value: '10,000+', label: 'Happy Travellers' },
-              { value: '60+', label: 'Countries Represented' },
-              { value: '10', label: 'Unique Destinations' },
-              { value: '2025', label: 'Founded in Baku' },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">{stat.value}</div>
-                <div className="text-white/80 font-medium">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
