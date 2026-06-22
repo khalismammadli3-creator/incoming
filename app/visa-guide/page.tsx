@@ -160,34 +160,28 @@ export default function VisaGuidePage() {
           <p className="text-gray-600 mb-5 leading-relaxed">
             Need country-specific visa information? We have detailed guides for common nationalities:
           </p>
-          <div className="space-y-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              { href: '/visa-guide/china', flag: '🇨🇳', title: 'Azerbaijan Visa for Chinese Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
-              { href: '/visa-guide/india', flag: '🇮🇳', title: 'Azerbaijan Visa for Indian Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
-              { href: '/visa-guide/indonesia', flag: '🇮🇩', title: 'Azerbaijan Visa for Indonesian Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
-              { href: '/visa-guide/israel', flag: '🇮🇱', title: 'Azerbaijan Visa for Israeli Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
-              { href: '/visa-guide/japan', flag: '🇯🇵', title: 'Azerbaijan Visa for Japanese Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
-              { href: '/visa-guide/korea', flag: '🇰🇷', title: 'Azerbaijan Visa for South Korean Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
-              { href: '/visa-guide/malaysia', flag: '🇲🇾', title: 'Azerbaijan Visa for Malaysian Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
-              { href: '/visa-guide/pakistan', flag: '🇵🇰', title: 'Azerbaijan Visa for Pakistani Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
-              { href: '/visa-guide/thailand', flag: '🇹🇭', title: 'Azerbaijan Visa for Thai Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
-              { href: '/visa-guide/vietnam', flag: '🇻🇳', title: 'Azerbaijan Visa for Vietnamese Citizens', subtitle: '$29 USD · Single entry · Up to 30 days · No visa on arrival' },
+              { href: '/visa-guide/china', flag: '🇨🇳', title: 'Azerbaijan Visa for Chinese Citizens', country: 'China' },
+              { href: '/visa-guide/india', flag: '🇮🇳', title: 'Azerbaijan Visa for Indian Citizens', country: 'India' },
+              { href: '/visa-guide/indonesia', flag: '🇮🇩', title: 'Azerbaijan Visa for Indonesian Citizens', country: 'Indonesia' },
+              { href: '/visa-guide/israel', flag: '🇮🇱', title: 'Azerbaijan Visa for Israeli Citizens', country: 'Israel' },
+              { href: '/visa-guide/japan', flag: '🇯🇵', title: 'Azerbaijan Visa for Japanese Citizens', country: 'Japan' },
+              { href: '/visa-guide/korea', flag: '🇰🇷', title: 'Azerbaijan Visa for South Korean Citizens', country: 'South Korea' },
+              { href: '/visa-guide/malaysia', flag: '🇲🇾', title: 'Azerbaijan Visa for Malaysian Citizens', country: 'Malaysia' },
+              { href: '/visa-guide/pakistan', flag: '🇵🇰', title: 'Azerbaijan Visa for Pakistani Citizens', country: 'Pakistan' },
+              { href: '/visa-guide/thailand', flag: '🇹🇭', title: 'Azerbaijan Visa for Thai Citizens', country: 'Thailand' },
+              { href: '/visa-guide/vietnam', flag: '🇻🇳', title: 'Azerbaijan Visa for Vietnamese Citizens', country: 'Vietnam' },
             ].map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex items-center justify-between bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm hover:border-accent/40 hover:shadow-md transition-all group"
+                aria-label={item.title}
+                className="group flex flex-col items-center text-center bg-white border border-gray-100 rounded-2xl px-4 py-6 shadow-sm hover:border-accent/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
               >
-                <div className="flex items-center gap-3">
-                  <span className="text-2xl">{item.flag}</span>
-                  <div>
-                    <p className="font-semibold text-gray-900 group-hover:text-accent transition-colors">{item.title}</p>
-                    <p className="text-gray-500 text-sm">{item.subtitle}</p>
-                  </div>
-                </div>
-                <svg className="w-5 h-5 text-gray-400 group-hover:text-accent transition-colors flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                <span className="text-5xl mb-3 drop-shadow-sm">{item.flag}</span>
+                <p className="font-semibold text-gray-800 group-hover:text-accent transition-colors text-sm leading-snug">{item.country}</p>
+                <span className="mt-2 text-xs text-accent/70 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">View guide →</span>
               </Link>
             ))}
           </div>
