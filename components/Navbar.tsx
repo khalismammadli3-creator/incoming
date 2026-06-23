@@ -92,7 +92,7 @@ export default function Navbar() {
             </div>
 
             <Link
-              href="/experiences/rock-climbing"
+              href="/experiences"
               className={`font-medium transition-colors hover:text-accent ${
                 scrolled ? 'text-gray-700' : 'text-white'
               }`}
@@ -195,7 +195,7 @@ export default function Navbar() {
               )}
             </div>
             <Link
-              href="/experiences/rock-climbing"
+              href="/experiences"
               onClick={() => setMobileOpen(false)}
               className="block py-2 text-gray-700 font-medium hover:text-accent"
             >
