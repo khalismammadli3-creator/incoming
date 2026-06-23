@@ -37,20 +37,20 @@ export default function RockClimbingPage() {
           style={{ backgroundImage: "url('/images/hero.webp')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 pt-40">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 pt-32">
           <Link
             href="/experiences"
-            className="inline-flex items-center gap-1.5 text-accent/80 hover:text-accent text-sm font-medium mb-6 transition-colors"
+            className="inline-flex items-center gap-1.5 text-accent/80 hover:text-accent text-sm font-medium mb-4 transition-colors"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             All Experiences
           </Link>
-          <span className="block text-accent font-semibold text-sm uppercase tracking-wider mb-3">
+          <span className="block text-accent font-semibold text-sm uppercase tracking-wider mb-2">
             Adventure · Absheron Peninsula
           </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-3 leading-tight">
             Nardaran Rock Climbing Experience — Baku
           </h1>
           <p className="text-blue-100 text-lg sm:text-xl max-w-2xl leading-relaxed">
@@ -59,13 +59,13 @@ export default function RockClimbingPage() {
         </div>
       </section>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
 
         {/* Highlights */}
         <section>
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Highlights</span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-6">What Makes This Experience Special</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-1 mb-4">What Makes This Experience Special</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               { icon: '🧗', text: 'Climb natural rock walls with panoramic views of the Caspian Sea' },
               { icon: '📊', text: 'Top rope and lead routes across UIAA grades 4–7' },
@@ -94,8 +94,8 @@ export default function RockClimbingPage() {
         {/* Full description */}
         <section>
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">About This Experience</span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-5">Nardaran Climbing Area</h2>
-          <div className="prose prose-gray max-w-none space-y-4 text-gray-600 leading-relaxed">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-1 mb-3">Nardaran Climbing Area</h2>
+          <div className="prose prose-gray max-w-none space-y-3 text-gray-600 leading-relaxed">
             <p>
               Head to the Nardaran climbing area, located on the Absheron Peninsula along the Caspian coast, just 40 minutes from central Baku. Enjoy top rope and lead routes across UIAA grades 4–7, with pre-placed bolts and solid rock packed with varied holds. Climb natural rock walls with panoramic views of the Caspian Sea.
             </p>
@@ -117,11 +117,11 @@ export default function RockClimbingPage() {
 
         {/* Included / Not included */}
         <section>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">What&apos;s Included</span>
-              <h2 className="text-xl font-bold text-gray-900 mt-2 mb-4">Included in This Experience</h2>
-              <ul className="space-y-3">
+              <h2 className="text-xl font-bold text-gray-900 mt-1 mb-3">Included in This Experience</h2>
+              <ul className="space-y-2">
                 {[
                   'Pre-placed bolts and anchor points',
                   'Detailed route map',
@@ -141,8 +141,8 @@ export default function RockClimbingPage() {
             </div>
             <div>
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">Not Included</span>
-              <h2 className="text-xl font-bold text-gray-900 mt-2 mb-4">Not Part of This Experience</h2>
-              <ul className="space-y-3">
+              <h2 className="text-xl font-bold text-gray-900 mt-1 mb-3">Not Part of This Experience</h2>
+              <ul className="space-y-2">
                 {[
                   'Food and drinks',
                   'Travel insurance',
@@ -172,8 +172,8 @@ export default function RockClimbingPage() {
         {/* Important information */}
         <section>
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Important Information</span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-6">Before You Go</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-1 mb-4">Before You Go</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               { label: 'What to bring', icon: '🎒', text: 'Sunscreen, water, comfortable clothes, climbing gear, helmet' },
               { label: 'Not suitable for', icon: '⚠️', text: 'People afraid of heights; people without climbing experience' },
@@ -189,7 +189,7 @@ export default function RockClimbingPage() {
               </div>
             ))}
           </div>
-          <div className="mt-4 space-y-3">
+          <div className="mt-3 space-y-2">
             <div className="border-l-4 border-accent bg-accent/10 rounded-r-2xl px-5 py-4">
               <p className="text-gray-700 text-sm leading-relaxed">
                 <strong>Winter conditions:</strong> Winter visits are subject to wind — check conditions before heading out.
@@ -215,9 +215,9 @@ export default function RockClimbingPage() {
 
         {/* Difficulty & details bar */}
         <section>
-          <div className="bg-primary rounded-2xl px-6 py-6">
-            <span className="text-accent font-semibold text-sm uppercase tracking-wider block mb-4">At a Glance</span>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="bg-primary rounded-2xl px-6 py-5">
+            <span className="text-accent font-semibold text-sm uppercase tracking-wider block mb-3">At a Glance</span>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
               {[
                 { label: 'Location', value: 'Nardaran, Absheron Peninsula, Baku' },
                 { label: 'Distance from Baku', value: '40 minutes' },
@@ -235,9 +235,9 @@ export default function RockClimbingPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-white border border-gray-100 rounded-2xl px-8 py-10 text-center shadow-sm">
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Ready to Climb?</h2>
-          <p className="text-gray-600 mb-7 leading-relaxed max-w-xl mx-auto">
+        <section className="bg-white border border-gray-100 rounded-2xl px-8 py-8 text-center shadow-sm">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Ready to Climb?</h2>
+          <p className="text-gray-600 mb-5 leading-relaxed max-w-xl mx-auto">
             Book this experience with Lumivara Travel — we handle transfers, guides, and gear so you can focus on the climb.
           </p>
           <Link

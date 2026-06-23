@@ -30,9 +30,9 @@ export default function InquiryPage() {
       </section>
 
       {/* Form */}
-      <section className="py-16 bg-light">
+      <section className="py-10 bg-light">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+          <div className="bg-white rounded-2xl shadow-sm p-5 border border-gray-100">
             <Suspense>
               <InquiryForm />
             </Suspense>

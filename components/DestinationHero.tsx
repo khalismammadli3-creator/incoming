@@ -15,9 +15,9 @@ export default function DestinationHero({ destination }: DestinationHeroProps) {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/80" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-sm text-white/70 mb-6">
+        <nav className="flex items-center gap-2 text-sm text-white/70 mb-4">
           <Link href="/" className="hover:text-white transition-colors">Home</Link>
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -43,12 +43,12 @@ export default function DestinationHero({ destination }: DestinationHeroProps) {
         <h1 className="text-5xl sm:text-6xl font-bold text-white mb-3">
           {destination.name}
         </h1>
-        <p className="text-xl text-white/80 mb-8 max-w-2xl">
+        <p className="text-xl text-white/80 mb-5 max-w-2xl">
           {destination.tagline}
         </p>
 
         {/* Meta info */}
-        <div className="flex flex-wrap gap-6 mb-8">
+        <div className="flex flex-wrap gap-4 mb-5">
           <div className="flex items-center gap-2 text-white/90">
             <svg className="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />

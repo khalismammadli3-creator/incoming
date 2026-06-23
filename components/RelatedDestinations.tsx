@@ -14,9 +14,9 @@ export default function RelatedDestinations({ destination }: RelatedDestinations
   if (related.length === 0) return null
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-6">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Explore More</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
             You May Also Like

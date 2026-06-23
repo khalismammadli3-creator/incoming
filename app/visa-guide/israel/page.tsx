@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import Link from 'next/link'
 import IsraelVisaFAQ from './IsraelVisaFAQ'
 
@@ -54,7 +54,7 @@ export default function IsraelVisaGuidePage() {
         </div>
       </section>
 
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-14">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
 
         <section>
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Key Facts</span>

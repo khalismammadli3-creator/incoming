@@ -37,15 +37,15 @@ export default function AboutPage() {
       </section>
 
       {/* Mission */}
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Mission</span>
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-4">
                 Crafting Authentic Azerbaijani Experiences
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-3 text-gray-600 leading-relaxed">
                 <p>
                   Built from the ground up in 2025 by local experts who know Azerbaijan inside out, Lumivara Incoming was born from a simple belief: that Azerbaijan deserves to be one of the world&apos;s great travel destinations. This remarkable country — with its fire temples, silk road history, Caucasus peaks and Caspian coast — has long been one of the Caucasus&apos;s best-kept secrets, and we are here to change that.
                 </p>
@@ -71,15 +71,15 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-light">
+      <section className="py-10 bg-light">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <div className="text-center mb-8">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Values</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">
               What We Stand For
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               {
                 title: 'Authentic Experiences',
@@ -97,8 +97,8 @@ export default function AboutPage() {
                 icon: '🧭',
               },
             ].map((val, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-md transition-shadow">
-                <div className="text-5xl mb-5">{val.icon}</div>
+              <div key={idx} className="bg-white rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-shadow">
+                <div className="text-5xl mb-3">{val.icon}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{val.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{val.desc}</p>
               </div>
@@ -108,15 +108,15 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-20 bg-white">
+      <section className="py-10 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <div className="text-center mb-8">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">The People</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">
               Meet Our Team
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {teamMembers.map((member, idx) => (
               <div key={idx} className="text-center group">
                 <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center text-primary font-bold text-xl mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -132,10 +132,10 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-light">
+      <section className="py-10 bg-light">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Explore Azerbaijan?</h2>
-          <p className="text-gray-600 mb-8">Let our team craft your perfect Azerbaijani adventure.</p>
+          <p className="text-gray-600 mb-5">Let our team craft your perfect Azerbaijani adventure.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/#tours" className="bg-accent text-primary px-8 py-4 rounded-full font-bold hover:bg-accent-hover transition-colors">
               Browse Tours

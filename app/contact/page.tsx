@@ -29,13 +29,13 @@ export default function ContactPage() {
       </section>
 
       {/* Content */}
-      <section className="py-16 bg-light">
+      <section className="py-10 bg-light">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Contact Info */}
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">How to Reach Us</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Reach Us</h2>
               </div>
 
               {[
@@ -100,8 +100,8 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+              <div className="bg-white rounded-2xl shadow-sm p-5 border border-gray-100">
+                <h2 className="text-2xl font-bold text-gray-900 mb-4">Send Us a Message</h2>
                 <ContactForm />
               </div>
             </div>

@@ -6,20 +6,20 @@ interface DestinationOverviewProps {
 
 export default function DestinationOverview({ destination }: DestinationOverviewProps) {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-10 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Description */}
           <div className="lg:col-span-2">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
               About This Tour
             </h2>
-            <p className="text-gray-600 text-lg leading-relaxed mb-8">
+            <p className="text-gray-600 text-lg leading-relaxed mb-5">
               {destination.description}
             </p>
 
             {/* Highlights */}
-            <h3 className="text-xl font-bold text-gray-900 mb-5">
+            <h3 className="text-xl font-bold text-gray-900 mb-3">
               Tour Highlights
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
