@@ -3,32 +3,31 @@ import Link from 'next/link'
 import MalaysiaVisaFAQ from './MalaysiaVisaFAQ'
 
 export const metadata: Metadata = {
-  title: 'Azerbaijan Visa for Malaysian Citizens 2026 | Lumivara Travel',
+  title: 'Azerbaijan Visa on Arrival for Malaysian Citizens 2026 | Lumivara Travel',
   description:
-    'Complete guide to the Azerbaijan e-Visa for Malaysian passport holders. Apply online at evisa.gov.az — $29 USD total fee, 3 working days standard processing, single entry, up to 30 days stay. No visa on arrival for Malaysian citizens.',
+    'Malaysian passport holders receive a 30-day visa on arrival at Heydar Aliyev International Airport in Baku. No advance application needed. Full guide from Lumivara Travel.',
   keywords: [
-    'Azerbaijan visa for Malaysian citizens',
-    'Azerbaijan e-visa Malaysia 2026',
-    'how to apply Azerbaijan visa from Malaysia',
-    'Azerbaijan visa fee for Malaysians',
-    'Azerbaijan e-Visa Malaysia',
-    'Azerbaijan visa requirements Malaysia',
-    'ASAN visa Malaysia',
-    'evisa Azerbaijan Malaysia',
+    'Azerbaijan visa on arrival Malaysian citizens',
+    'Azerbaijan visa Malaysia 2026',
+    'Malaysia Azerbaijan visa on arrival',
+    'Azerbaijan visa for Malaysian passport',
+    'Baku visa on arrival Malaysia',
+    'Azerbaijan entry requirements Malaysia',
+    'Azerbaijan travel Malaysia',
+    'Heydar Aliyev airport visa on arrival',
   ],
   alternates: { canonical: 'https://incoming.lumivaratravel.az/visa-guide/malaysia/' },
   openGraph: {
-    title: 'Azerbaijan Visa for Malaysian Citizens 2026 | Lumivara Travel',
+    title: 'Azerbaijan Visa on Arrival for Malaysian Citizens 2026 | Lumivara Travel',
     description:
-      'Malaysian passport holders can apply for the Azerbaijan e-Visa online at evisa.gov.az — $29 USD, 3 working days, single entry, up to 30 days. No visa on arrival.',
+      'Malaysian passport holders receive a 30-day visa on arrival at Heydar Aliyev International Airport. No advance application needed.',
     url: 'https://incoming.lumivaratravel.az/visa-guide/malaysia/',
     images: [{ url: '/images/hero.webp', width: 1920, height: 1080, alt: 'Azerbaijan — Baku skyline, Lumivara Travel DMC' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Azerbaijan Visa for Malaysian Citizens 2026 | Lumivara Travel',
-    description:
-      'Malaysian passport holders can apply for the Azerbaijan e-Visa online — $29 USD, 3 working days, single entry. No visa on arrival for Malaysian citizens.',
+    title: 'Azerbaijan Visa on Arrival for Malaysian Citizens 2026 | Lumivara Travel',
+    description: 'Malaysian passport holders receive a 30-day visa on arrival at Heydar Aliyev International Airport.',
     images: ['/images/hero.webp'],
   },
 }
@@ -47,10 +46,10 @@ export default function MalaysiaVisaGuidePage() {
           </Link>
           <span className="block text-accent font-semibold text-sm uppercase tracking-wider mb-3">Malaysian Citizens</span>
           <h1 className="text-4xl sm:text-5xl font-bold text-white mt-0 mb-5">
-            Azerbaijan Visa for Malaysian Citizens — Complete 2026 Guide
+            Azerbaijan Visa on Arrival for Malaysian Citizens — Complete 2026 Guide
           </h1>
           <p className="text-blue-200 text-lg max-w-2xl mx-auto leading-relaxed">
-            Malaysian passport holders are eligible for the Azerbaijan e-Visa and can apply entirely online without visiting an embassy. Note: there is no Azerbaijan visa on arrival for Malaysian citizens — the e-Visa must be obtained in advance through the official portal.
+            Malaysian passport holders receive a visa on arrival at Heydar Aliyev International Airport in Baku. No advance online application is needed — the visa is issued at the airport immigration desk on arrival.
           </p>
         </div>
       </section>
@@ -61,20 +60,18 @@ export default function MalaysiaVisaGuidePage() {
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Key Facts</span>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-3">Azerbaijan Visa at a Glance — Malaysian Passport</h2>
           <p className="text-gray-600 mb-5 leading-relaxed">
-            The Azerbaijan visa fee for Malaysian citizens in 2026 is <strong>$29 USD</strong> in total — paid directly through the official government portal at evisa.gov.az.
+            Malaysian citizens do not need to apply for a visa in advance. The visa is obtained on arrival at Heydar Aliyev International Airport, Baku. Verify the current visa fee at migration.gov.az before travelling.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {[
               { label: 'Visa required', value: 'Yes' },
-              { label: 'Visa on arrival', value: 'No' },
-              { label: 'e-Visa available', value: 'Yes' },
-              { label: 'Official portal', value: 'evisa.gov.az' },
-              { label: 'Total fee', value: '$29 USD' },
-              { label: 'Standard processing', value: '3 working days' },
-              { label: 'Urgent processing', value: '3 hours' },
-              { label: 'Stay permitted', value: 'Up to 30 days' },
-              { label: 'Visa validity', value: '90 days from issuance' },
+              { label: 'Visa on arrival', value: 'Yes' },
+              { label: 'e-Visa needed', value: 'No' },
+              { label: 'Where to get it', value: 'Airport immigration desk' },
+              { label: 'Airport', value: 'Heydar Aliyev International, Baku' },
+              { label: 'Duration', value: '30 days' },
               { label: 'Entry type', value: 'Single entry' },
+              { label: 'Official source', value: 'migration.gov.az' },
             ].map((item) => (
               <div key={item.label} className="bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm flex items-center justify-between gap-4">
                 <span className="text-gray-500 text-sm font-medium">{item.label}</span>
@@ -85,15 +82,16 @@ export default function MalaysiaVisaGuidePage() {
         </section>
 
         <section>
-          <span className="text-accent font-semibold text-sm uppercase tracking-wider">Documents Required</span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-5">What You Need to Apply</h2>
-          <p className="text-gray-600 mb-5 leading-relaxed">Before submitting your Azerbaijan e-Visa application on the ASAN Visa portal, have the following documents ready:</p>
+          <span className="text-accent font-semibold text-sm uppercase tracking-wider">What to Bring</span>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-5">Documents to Present at the Immigration Desk</h2>
+          <p className="text-gray-600 mb-5 leading-relaxed">Have the following ready when you arrive at Heydar Aliyev International Airport:</p>
           <ul className="space-y-3">
             {[
-              { icon: '🛂', text: 'Valid Malaysian passport with at least 3 months of validity remaining beyond the e-Visa expiry date' },
-              { icon: '📷', text: 'Digital passport photo with a plain white background (clear, recent, facing forward)' },
-              { icon: '📧', text: 'A valid email address — your approved e-Visa will be sent here' },
-              { icon: '💳', text: 'Credit or debit card accepted by the portal: Visa, Mastercard, UnionPay or JCB' },
+              { icon: '🛂', text: 'Valid Malaysian passport with sufficient remaining validity' },
+              { icon: '✈️', text: 'Return or onward ticket confirming you will leave Azerbaijan within 30 days' },
+              { icon: '🏨', text: 'Proof of accommodation — hotel reservation or invitation letter from a host in Azerbaijan' },
+              { icon: '💵', text: 'Evidence of sufficient funds for your stay (cash or bank statement)' },
+              { icon: '📷', text: 'Passport-sized photo — recommended to bring one in case it is requested' },
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm">
                 <span className="text-xl flex-shrink-0">{item.icon}</span>
@@ -105,19 +103,14 @@ export default function MalaysiaVisaGuidePage() {
 
         <section>
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Step by Step</span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-5">How to Apply — Azerbaijan e-Visa from Malaysia</h2>
-          <p className="text-gray-600 mb-6 leading-relaxed">
-            The Azerbaijan e-Visa application steps for Malaysian citizens below cover the full process on the official ASAN Visa portal — from registration to receiving your visa by email:
-          </p>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-5">How to Get Your Azerbaijan Visa on Arrival</h2>
           <ol className="space-y-4">
             {[
-              'Go to evisa.gov.az — the only official government portal for Azerbaijan e-Visa applications',
-              "Click 'New Application' on the homepage",
-              'Fill in your personal details and Malaysian passport information accurately',
-              'Upload your passport bio page and your digital passport photo',
-              'Pay the official Azerbaijan visa fee of $29 USD securely online by card',
-              'Receive your approved Azerbaijan e-Visa by email within 3 working days (or 3 hours if urgent)',
-              'Print the e-Visa and present it on arrival at Heydar Aliyev International Airport, Baku',
+              'Arrive at Heydar Aliyev International Airport in Baku',
+              'Proceed to the immigration or visa-on-arrival desk before reaching passport control — follow the signs in the arrivals hall',
+              'Present your passport and required documents to the immigration officer',
+              'Pay the visa fee at the desk (verify the current fee at migration.gov.az before travelling)',
+              'Receive your 30-day visa stamp in your passport and proceed to passport control',
             ].map((text, i) => (
               <li key={i} className="flex items-start gap-4 bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm">
                 <span className="flex-shrink-0 w-8 h-8 bg-accent text-primary font-bold text-sm rounded-full flex items-center justify-center">{i + 1}</span>
@@ -134,9 +127,9 @@ export default function MalaysiaVisaGuidePage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
               </svg>
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Warning — Avoid Third-Party Visa Websites</p>
+                <p className="font-semibold text-gray-900 mb-1">Important — Airport Entry Only</p>
                 <p className="text-gray-700 leading-relaxed text-sm">
-                  Always apply directly at <strong>evisa.gov.az</strong>. Several third-party websites charge up to $69 USD for the same visa — if you are wondering how much the Azerbaijan visa costs for Malaysians, the answer is $29 USD through the official portal, not the inflated prices charged elsewhere. Lumivara Travel does not process visas — we always recommend applying through the official source only.
+                  The visa on arrival facility is <strong>only available at Heydar Aliyev International Airport in Baku</strong>. If you are entering Azerbaijan by land border or sea port, you must obtain a visa in advance through the official evisa.gov.az portal or an Azerbaijani embassy before you travel.
                 </p>
               </div>
             </div>
@@ -160,7 +153,7 @@ export default function MalaysiaVisaGuidePage() {
         </section>
 
         <p className="text-gray-400 text-xs leading-relaxed text-center border-t border-gray-100 pt-8">
-          Visa information is subject to change. Always verify current requirements at evisa.gov.az before applying.
+          Visa information is subject to change. Always verify current requirements at migration.gov.az before travelling.
         </p>
 
       </div>

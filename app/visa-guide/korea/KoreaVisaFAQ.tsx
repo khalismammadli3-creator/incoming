@@ -4,24 +4,24 @@ import { useState } from 'react'
 
 const faqs = [
   {
-    question: 'Is there visa on arrival for South Korean citizens in Azerbaijan?',
+    question: 'Do South Korean citizens need to apply for a visa before visiting Azerbaijan?',
     answer:
-      'No — South Korean passport holders (Republic of Korea) cannot obtain a visa on arrival in Azerbaijan. The Azerbaijan e-Visa must be applied for in advance through the official ASAN Visa portal at evisa.gov.az. The process is entirely online and takes as little as 3 hours with urgent processing.',
+      'No — South Korean passport holders receive a visa on arrival at Heydar Aliyev International Airport in Baku. There is no need to apply online at evisa.gov.az or visit an embassy in advance. Simply arrive at the airport with your valid passport and required documents.',
   },
   {
-    question: 'How much does the Azerbaijan visa cost for South Korean citizens?',
+    question: 'Is visa on arrival available at all Azerbaijan entry points?',
     answer:
-      'The total cost of an Azerbaijan e-Visa for South Korean citizens is $29 USD, made up of a $20 USD government fee and a $9 USD service fee. This is payable online by Visa, Mastercard, UnionPay or JCB card. Several third-party websites charge significantly more — always apply at the official evisa.gov.az portal to pay only the official fee.',
+      'No — the visa on arrival facility for South Korean citizens is only available at Heydar Aliyev International Airport in Baku. If you plan to enter Azerbaijan by land border or sea port, you must obtain a visa in advance through the official evisa.gov.az portal or an Azerbaijani embassy before travelling.',
   },
   {
-    question: 'Can I extend my Azerbaijan e-Visa after arrival?',
+    question: 'Can I extend my Azerbaijan visa on arrival?',
     answer:
-      'No — the Azerbaijan e-Visa cannot be extended once you are inside the country. If you need to stay longer than 30 days, you must either leave Azerbaijan and submit a new e-Visa application, or visit the State Migration Service of Azerbaijan in Baku before your permitted stay expires to enquire about longer-stay options.',
+      'Extensions beyond the initial 30-day stay are not available through the visa on arrival facility. If you need to stay longer, contact the State Migration Service of Azerbaijan in Baku before your permitted stay expires to enquire about longer-stay options.',
   },
   {
-    question: 'Can I apply for a family or group visa to Azerbaijan?',
+    question: 'What documents should I bring for Azerbaijan visa on arrival?',
     answer:
-      'Yes — the official ASAN Visa portal supports family applications for groups of 2 to 10 persons, and group applications for 10 to 300 persons, all submitted through the same online portal at evisa.gov.az. Each person will receive their own individual e-Visa document.',
+      'You should bring your valid South Korean passport, a return or onward ticket, proof of accommodation (hotel booking or invitation letter), evidence of sufficient funds for your stay, and a passport-sized photo (recommended). Always verify the latest requirements at migration.gov.az before travelling.',
   },
 ]
 

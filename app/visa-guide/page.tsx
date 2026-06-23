@@ -157,33 +157,70 @@ export default function VisaGuidePage() {
         <section>
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Country Guides</span>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-5">Visa Guides by Nationality</h2>
-          <p className="text-gray-600 mb-5 leading-relaxed">
-            Need country-specific visa information? We have detailed guides for common nationalities:
+          <p className="text-gray-600 mb-8 leading-relaxed">
+            Need country-specific visa information? Select your nationality below — requirements differ depending on whether your country receives visa on arrival or must apply via e-Visa in advance.
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              { href: '/visa-guide/china', flag: '🇨🇳', title: 'Azerbaijan Visa for Chinese Citizens', country: 'China' },
-              { href: '/visa-guide/india', flag: '🇮🇳', title: 'Azerbaijan Visa for Indian Citizens', country: 'India' },
-              { href: '/visa-guide/indonesia', flag: '🇮🇩', title: 'Azerbaijan Visa for Indonesian Citizens', country: 'Indonesia' },
-              { href: '/visa-guide/israel', flag: '🇮🇱', title: 'Azerbaijan Visa for Israeli Citizens', country: 'Israel' },
-              { href: '/visa-guide/japan', flag: '🇯🇵', title: 'Azerbaijan Visa for Japanese Citizens', country: 'Japan' },
-              { href: '/visa-guide/korea', flag: '🇰🇷', title: 'Azerbaijan Visa for South Korean Citizens', country: 'South Korea' },
-              { href: '/visa-guide/malaysia', flag: '🇲🇾', title: 'Azerbaijan Visa for Malaysian Citizens', country: 'Malaysia' },
-              { href: '/visa-guide/pakistan', flag: '🇵🇰', title: 'Azerbaijan Visa for Pakistani Citizens', country: 'Pakistan' },
-              { href: '/visa-guide/thailand', flag: '🇹🇭', title: 'Azerbaijan Visa for Thai Citizens', country: 'Thailand' },
-              { href: '/visa-guide/vietnam', flag: '🇻🇳', title: 'Azerbaijan Visa for Vietnamese Citizens', country: 'Vietnam' },
-            ].map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                aria-label={item.title}
-                className="group flex flex-col items-center text-center bg-white border border-gray-100 rounded-2xl px-4 py-6 shadow-sm hover:border-accent/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
-              >
-                <span className="text-5xl mb-3 drop-shadow-sm">{item.flag}</span>
-                <p className="font-semibold text-gray-800 group-hover:text-accent transition-colors text-sm leading-snug">{item.country}</p>
-                <span className="mt-2 text-xs text-accent/70 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">View guide →</span>
-              </Link>
-            ))}
+
+          {/* Visa on Arrival */}
+          <div className="mb-8">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 border border-green-200 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                Visa on Arrival at Baku Airport
+              </span>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+              {[
+                { href: '/visa-guide/china', flag: '🇨🇳', code: 'CN', title: 'Azerbaijan Visa on Arrival for Chinese Citizens', country: 'China' },
+                { href: '/visa-guide/indonesia', flag: '🇮🇩', code: 'ID', title: 'Azerbaijan Visa on Arrival for Indonesian Citizens', country: 'Indonesia' },
+                { href: '/visa-guide/israel', flag: '🇮🇱', code: 'IL', title: 'Azerbaijan Visa on Arrival for Israeli Citizens', country: 'Israel' },
+                { href: '/visa-guide/japan', flag: '🇯🇵', code: 'JP', title: 'Azerbaijan Visa on Arrival for Japanese Citizens', country: 'Japan' },
+                { href: '/visa-guide/korea', flag: '🇰🇷', code: 'KR', title: 'Azerbaijan Visa on Arrival for South Korean Citizens', country: 'South Korea' },
+                { href: '/visa-guide/malaysia', flag: '🇲🇾', code: 'MY', title: 'Azerbaijan Visa on Arrival for Malaysian Citizens', country: 'Malaysia' },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  aria-label={item.title}
+                  className="group flex flex-col items-center text-center bg-white border border-gray-100 rounded-2xl px-4 py-6 shadow-sm hover:border-green-300 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+                >
+                  <span className="text-5xl mb-3 drop-shadow-sm">{item.flag}</span>
+                  <span className="hidden sm:inline-block text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-1">{item.code}</span>
+                  <p className="font-semibold text-gray-800 group-hover:text-green-700 transition-colors text-sm leading-snug">{item.country}</p>
+                  <span className="mt-2 text-xs text-green-600/80 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">View guide →</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* e-Visa required */}
+          <div>
+            <div className="flex items-center gap-3 mb-4">
+              <span className="inline-flex items-center gap-1.5 bg-accent/10 text-primary border border-accent/30 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                e-Visa Required — Apply Online in Advance
+              </span>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+              {[
+                { href: '/visa-guide/india', flag: '🇮🇳', code: 'IN', title: 'Azerbaijan Visa for Indian Citizens', country: 'India' },
+                { href: '/visa-guide/pakistan', flag: '🇵🇰', code: 'PK', title: 'Azerbaijan Visa for Pakistani Citizens', country: 'Pakistan' },
+                { href: '/visa-guide/thailand', flag: '🇹🇭', code: 'TH', title: 'Azerbaijan Visa for Thai Citizens', country: 'Thailand' },
+                { href: '/visa-guide/vietnam', flag: '🇻🇳', code: 'VN', title: 'Azerbaijan Visa for Vietnamese Citizens', country: 'Vietnam' },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  aria-label={item.title}
+                  className="group flex flex-col items-center text-center bg-white border border-gray-100 rounded-2xl px-4 py-6 shadow-sm hover:border-accent/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+                >
+                  <span className="text-5xl mb-3 drop-shadow-sm">{item.flag}</span>
+                  <span className="hidden sm:inline-block text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-1">{item.code}</span>
+                  <p className="font-semibold text-gray-800 group-hover:text-accent transition-colors text-sm leading-snug">{item.country}</p>
+                  <span className="mt-2 text-xs text-accent/70 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">View guide →</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 
