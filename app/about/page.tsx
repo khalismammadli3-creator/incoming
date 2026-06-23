@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -25,7 +25,7 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-24 bg-primary overflow-hidden">
+      <section className="relative pt-24 pb-6 bg-primary overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Story</span>
@@ -37,9 +37,9 @@ export default function AboutPage() {
       </section>
 
       {/* Mission */}
-      <section className="py-10 bg-white">
+      <section className="py-4 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-center">
             <div>
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Mission</span>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3 mb-4">
@@ -71,15 +71,15 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-10 bg-light">
+      <section className="py-4 bg-light">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+          <div className="text-center mb-3">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">Our Values</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">
               What We Stand For
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
             {[
               {
                 title: 'Authentic Experiences',
@@ -97,7 +97,7 @@ export default function AboutPage() {
                 icon: '🧭',
               },
             ].map((val, idx) => (
-              <div key={idx} className="bg-white rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-shadow">
+              <div key={idx} className="bg-white rounded-2xl p-3 text-center shadow-sm hover:shadow-md transition-shadow">
                 <div className="text-5xl mb-3">{val.icon}</div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{val.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{val.desc}</p>
@@ -108,15 +108,15 @@ export default function AboutPage() {
       </section>
 
       {/* Team */}
-      <section className="py-10 bg-white">
+      <section className="py-4 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+          <div className="text-center mb-3">
             <span className="text-accent font-semibold text-sm uppercase tracking-wider">The People</span>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-3">
               Meet Our Team
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2">
             {teamMembers.map((member, idx) => (
               <div key={idx} className="text-center group">
                 <div className="w-20 h-20 bg-accent rounded-full flex items-center justify-center text-primary font-bold text-xl mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -132,11 +132,11 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-10 bg-light">
+      <section className="py-4 bg-light">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Explore Azerbaijan?</h2>
           <p className="text-gray-600 mb-5">Let our team craft your perfect Azerbaijani adventure.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-2 justify-center">
             <Link href="/#tours" className="bg-accent text-primary px-8 py-4 rounded-full font-bold hover:bg-accent-hover transition-colors">
               Browse Tours
             </Link>

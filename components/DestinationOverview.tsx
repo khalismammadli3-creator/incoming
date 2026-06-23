@@ -1,4 +1,4 @@
-import { Destination } from '@/lib/destinations'
+﻿import { Destination } from '@/lib/destinations'
 
 interface DestinationOverviewProps {
   destination: Destination
@@ -6,9 +6,9 @@ interface DestinationOverviewProps {
 
 export default function DestinationOverview({ destination }: DestinationOverviewProps) {
   return (
-    <section className="py-10 bg-white">
+    <section className="py-4 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
           {/* Description */}
           <div className="lg:col-span-2">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -24,7 +24,7 @@ export default function DestinationOverview({ destination }: DestinationOverview
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {destination.highlights.map((highlight, idx) => (
-                <div key={idx} className="flex items-start gap-3 p-4 bg-light rounded-xl">
+                <div key={idx} className="flex items-start gap-3 p-3 bg-light rounded-xl">
                   <div className="w-6 h-6 bg-accent rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg className="w-3.5 h-3.5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
@@ -38,7 +38,7 @@ export default function DestinationOverview({ destination }: DestinationOverview
 
           {/* Quick Info Sidebar */}
           <div>
-            <div className="bg-light rounded-2xl p-6 sticky top-24">
+            <div className="bg-light rounded-2xl p-3 sticky top-24">
               <h3 className="font-bold text-gray-900 text-lg mb-5">Quick Info</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
@@ -94,7 +94,7 @@ export default function DestinationOverview({ destination }: DestinationOverview
                 href={`https://wa.me/994102372121?text=Hi%2C%20I%27d%20like%20to%20book%20the%20${encodeURIComponent(destination.title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-6 w-full bg-accent text-primary py-3.5 rounded-xl font-bold text-center hover:bg-accent-hover transition-colors flex items-center justify-center gap-2"
+                className="mt-3 w-full bg-accent text-primary py-3.5 rounded-xl font-bold text-center hover:bg-accent-hover transition-colors flex items-center justify-center gap-2"
               >
                 Book This Tour
               </a>

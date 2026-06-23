@@ -41,12 +41,12 @@ export default function IndiaVisaGuidePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-24 bg-primary overflow-hidden">
+      <section className="relative pt-24 pb-6 bg-primary overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <Link
             href="/visa-guide"
-            className="inline-flex items-center gap-1.5 text-accent/80 hover:text-accent text-sm font-medium mb-6 transition-colors"
+            className="inline-flex items-center gap-1.5 text-accent/80 hover:text-accent text-sm font-medium mb-3 transition-colors"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -63,7 +63,7 @@ export default function IndiaVisaGuidePage() {
         </div>
       </section>
 
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-4">
 
         {/* Key facts box */}
         <section>
@@ -85,7 +85,7 @@ export default function IndiaVisaGuidePage() {
             ].map((item) => (
               <div
                 key={item.label}
-                className="bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm flex items-center justify-between gap-4"
+                className="bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm flex items-center justify-between gap-2"
               >
                 <span className="text-gray-500 text-sm font-medium">{item.label}</span>
                 <span className={`font-bold text-right ${item.value === 'No' ? 'text-red-500' : item.value === 'Yes' ? 'text-green-600' : 'text-gray-900'}`}>
@@ -122,7 +122,7 @@ export default function IndiaVisaGuidePage() {
         <section>
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Step by Step</span>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-5">How to Apply — Azerbaijan e-Visa for Indians</h2>
-          <p className="text-gray-600 mb-6 leading-relaxed">
+          <p className="text-gray-600 mb-3 leading-relaxed">
             The Azerbaijan e-Visa application steps for Indians below cover the full process on the official ASAN Visa portal — from registration to receiving your visa by email:
           </p>
           <ol className="space-y-4">
@@ -135,7 +135,7 @@ export default function IndiaVisaGuidePage() {
               'Receive your approved Azerbaijan e-Visa by email within 3 working days (or 3 hours if urgent)',
               'Print the e-Visa and present it on arrival at Heydar Aliyev International Airport, Baku',
             ].map((text, i) => (
-              <li key={i} className="flex items-start gap-4 bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm">
+              <li key={i} className="flex items-start gap-2 bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm">
                 <span className="flex-shrink-0 w-8 h-8 bg-accent text-primary font-bold text-sm rounded-full flex items-center justify-center">
                   {i + 1}
                 </span>
@@ -165,16 +165,16 @@ export default function IndiaVisaGuidePage() {
         {/* FAQ */}
         <section>
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">FAQ</span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-6">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-3">
             Frequently Asked Questions — Azerbaijan Visa for Indians
           </h2>
           <IndiaVisaFAQ />
         </section>
 
         {/* CTA */}
-        <section className="bg-primary rounded-2xl px-8 py-10 text-center">
+        <section className="bg-primary rounded-2xl px-8 py-4 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Planning a Trip to Azerbaijan from India?</h2>
-          <p className="text-blue-200 mb-7 leading-relaxed max-w-xl mx-auto">
+          <p className="text-blue-200 mb-3 leading-relaxed max-w-xl mx-auto">
             Lumivara Travel handles complete itineraries, airport transfers, hotels and private tours across Azerbaijan — tailored for Indian travellers and groups.
           </p>
           <Link

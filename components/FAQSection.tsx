@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { Destination } from '@/lib/destinations'
@@ -11,9 +11,9 @@ export default function FAQSection({ destination }: FAQSectionProps) {
   const [openIdx, setOpenIdx] = useState<number | null>(0)
 
   return (
-    <section className="py-10 bg-light">
+    <section className="py-4 bg-light">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-6">
+        <div className="text-center mb-3">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Have Questions?</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
             Frequently Asked Questions
@@ -46,7 +46,7 @@ export default function FAQSection({ destination }: FAQSectionProps) {
           ))}
         </div>
 
-        <div className="mt-6 text-center">
+        <div className="mt-3 text-center">
           <p className="text-gray-600 mb-4">Still have questions?</p>
           <a
             href="/contact"

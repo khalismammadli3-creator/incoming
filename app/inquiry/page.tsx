@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import { Suspense } from 'react'
 import InquiryForm from './InquiryForm'
 
@@ -18,7 +18,7 @@ export default function InquiryPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-primary overflow-hidden">
+      <section className="relative pt-24 pb-6 bg-primary overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Plan Your Journey</span>
@@ -30,9 +30,9 @@ export default function InquiryPage() {
       </section>
 
       {/* Form */}
-      <section className="py-10 bg-light">
+      <section className="py-4 bg-light">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-sm p-5 border border-gray-100">
+          <div className="bg-white rounded-2xl shadow-sm p-3 border border-gray-100">
             <Suspense>
               <InquiryForm />
             </Suspense>

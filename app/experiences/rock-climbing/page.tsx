@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -37,7 +37,7 @@ export default function RockClimbingPage() {
           style={{ backgroundImage: "url('/images/hero.webp')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 pt-32">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 pt-24">
           <Link
             href="/experiences"
             className="inline-flex items-center gap-1.5 text-accent/80 hover:text-accent text-sm font-medium mb-4 transition-colors"
@@ -59,7 +59,7 @@ export default function RockClimbingPage() {
         </div>
       </section>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-4">
 
         {/* Highlights */}
         <section>
@@ -73,7 +73,7 @@ export default function RockClimbingPage() {
               { icon: '🔩', text: 'Pre-placed bolts and solid rock with varied holds' },
               { icon: '🗺️', text: 'Stunning outdoor setting just 40 minutes from central Baku' },
             ].map((item, i) => (
-              <div key={i} className="flex items-start gap-4 bg-white border border-gray-100 rounded-2xl px-5 py-4 shadow-sm">
+              <div key={i} className="flex items-start gap-2 bg-white border border-gray-100 rounded-2xl px-5 py-4 shadow-sm">
                 <span className="text-2xl flex-shrink-0">{item.icon}</span>
                 <p className="text-gray-700 leading-relaxed">{item.text}</p>
               </div>
@@ -117,7 +117,7 @@ export default function RockClimbingPage() {
 
         {/* Included / Not included */}
         <section>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <div>
               <span className="text-accent font-semibold text-sm uppercase tracking-wider">What&apos;s Included</span>
               <h2 className="text-xl font-bold text-gray-900 mt-1 mb-3">Included in This Experience</h2>
@@ -235,7 +235,7 @@ export default function RockClimbingPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-white border border-gray-100 rounded-2xl px-8 py-8 text-center shadow-sm">
+        <section className="bg-white border border-gray-100 rounded-2xl px-8 py-4 text-center shadow-sm">
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2">Ready to Climb?</h2>
           <p className="text-gray-600 mb-5 leading-relaxed max-w-xl mx-auto">
             Book this experience with Lumivara Travel — we handle transfers, guides, and gear so you can focus on the climb.

@@ -37,10 +37,10 @@ export default function RejectionReasonsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-24 bg-primary overflow-hidden">
+      <section className="relative pt-24 pb-6 bg-primary overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <Link href="/visa-guide" className="inline-flex items-center gap-1.5 text-accent/80 hover:text-accent text-sm font-medium mb-6 transition-colors">
+          <Link href="/visa-guide" className="inline-flex items-center gap-1.5 text-accent/80 hover:text-accent text-sm font-medium mb-3 transition-colors">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
@@ -56,12 +56,12 @@ export default function RejectionReasonsPage() {
         </div>
       </section>
 
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-4">
 
         {/* Most common rejection reasons */}
         <section>
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Common Reasons</span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-6">Most Common Azerbaijan e-Visa Rejection Reasons</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-3">Most Common Azerbaijan e-Visa Rejection Reasons</h2>
           <div className="space-y-4">
             {[
               {
@@ -110,7 +110,7 @@ export default function RejectionReasonsPage() {
                 detail: 'The passport used to apply must be the same passport used for travel. If your passport is renewed or replaced after applying, the original e-Visa becomes invalid and a new application is required.',
               },
             ].map((item) => (
-              <div key={item.number} className="flex items-start gap-5 bg-white border border-gray-100 rounded-2xl px-6 py-5 shadow-sm">
+              <div key={item.number} className="flex items-start gap-2 bg-white border border-gray-100 rounded-2xl px-6 py-5 shadow-sm">
                 <span className="flex-shrink-0 text-accent font-bold text-lg font-mono">{item.number}</span>
                 <div>
                   <p className="font-semibold text-gray-900 mb-1">{item.title}</p>
@@ -171,7 +171,7 @@ export default function RejectionReasonsPage() {
               'Pay the $29 USD fee again (the $9 service fee from your rejected application will have been refunded)',
               'Allow sufficient processing time — 3 working days standard, or 3 hours with urgent processing',
             ].map((text, i) => (
-              <li key={i} className="flex items-start gap-4 bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm">
+              <li key={i} className="flex items-start gap-2 bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm">
                 <span className="flex-shrink-0 w-8 h-8 bg-accent text-primary font-bold text-sm rounded-full flex items-center justify-center">{i + 1}</span>
                 <span className="text-gray-700 leading-relaxed pt-0.5">{text}</span>
               </li>
@@ -182,14 +182,14 @@ export default function RejectionReasonsPage() {
         {/* FAQ */}
         <section>
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">FAQ</span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-6">Frequently Asked Questions — Rejected Azerbaijan Visa</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-3">Frequently Asked Questions — Rejected Azerbaijan Visa</h2>
           <RejectionFAQ />
         </section>
 
         {/* CTA */}
-        <section className="bg-primary rounded-2xl px-8 py-10 text-center">
+        <section className="bg-primary rounded-2xl px-8 py-4 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Planning Your Azerbaijan Trip?</h2>
-          <p className="text-blue-200 mb-7 leading-relaxed max-w-xl mx-auto">
+          <p className="text-blue-200 mb-3 leading-relaxed max-w-xl mx-auto">
             Lumivara Travel handles complete itineraries, airport transfers and private tours across Azerbaijan — so once your visa is sorted, everything else is taken care of.
           </p>
           <Link href="/inquiry" className="inline-block bg-accent text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-accent-hover transition-all duration-300 shadow-lg hover:shadow-accent/30 hover:-translate-y-0.5">

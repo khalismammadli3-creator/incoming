@@ -1,4 +1,4 @@
-import { Destination } from '@/lib/destinations'
+﻿import { Destination } from '@/lib/destinations'
 
 interface HighlightsSectionProps {
   destination: Destination
@@ -15,18 +15,18 @@ const highlightIcons = [
 
 export default function HighlightsSection({ destination }: HighlightsSectionProps) {
   return (
-    <section className="py-10 bg-white">
+    <section className="py-4 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-6">
+        <div className="text-center mb-3">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Must-See</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
             Key Attractions
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
           {destination.highlights.map((highlight, idx) => (
-            <div key={idx} className="flex items-start gap-4 p-4 bg-light rounded-2xl hover:shadow-md transition-shadow">
+            <div key={idx} className="flex items-start gap-2 p-3 bg-light rounded-2xl hover:shadow-md transition-shadow">
               <div className="w-12 h-12 bg-accent/15 rounded-xl flex items-center justify-center text-accent flex-shrink-0">
                 {highlightIcons[idx % highlightIcons.length]}
               </div>

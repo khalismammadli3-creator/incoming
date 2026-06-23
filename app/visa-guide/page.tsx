@@ -36,7 +36,7 @@ export default function VisaGuidePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-24 bg-primary overflow-hidden">
+      <section className="relative pt-24 pb-6 bg-primary overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Travel Information</span>
@@ -49,7 +49,7 @@ export default function VisaGuidePage() {
         </div>
       </section>
 
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-4 space-y-4">
 
         {/* Section 1 — What is the e-Visa */}
         <section>
@@ -103,7 +103,7 @@ export default function VisaGuidePage() {
         <section>
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Processing Times</span>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-5">Processing Times &amp; Visa Details</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
             {[
               { label: 'Standard Processing', value: '3 working days' },
               { label: 'Urgent Processing', value: '3 hours' },
@@ -111,7 +111,7 @@ export default function VisaGuidePage() {
               { label: 'Permitted Stay', value: 'Up to 30 days' },
               { label: 'Entry Type', value: 'Single entry' },
             ].map((item) => (
-              <div key={item.label} className="bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm flex items-center justify-between gap-4">
+              <div key={item.label} className="bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm flex items-center justify-between gap-2">
                 <span className="text-gray-500 text-sm font-medium">{item.label}</span>
                 <span className="text-gray-900 font-bold text-right">{item.value}</span>
               </div>
@@ -123,7 +123,7 @@ export default function VisaGuidePage() {
         <section>
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Step by Step</span>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-5">How to Apply for an Azerbaijan e-Visa</h2>
-          <p className="text-gray-600 mb-6 leading-relaxed">
+          <p className="text-gray-600 mb-3 leading-relaxed">
             Follow these steps to complete your Azerbaijan visa application through the ASAN Visa portal at evisa.gov.az:
           </p>
           <ol className="space-y-4">
@@ -136,7 +136,7 @@ export default function VisaGuidePage() {
               'Receive your approved e-Visa by email within your chosen processing time',
               'Print or save your e-Visa digitally — you will need to present it on arrival',
             ].map((text, i) => (
-              <li key={i} className="flex items-start gap-4 bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm">
+              <li key={i} className="flex items-start gap-2 bg-white border border-gray-100 rounded-xl px-5 py-4 shadow-sm">
                 <span className="flex-shrink-0 w-8 h-8 bg-accent text-primary font-bold text-sm rounded-full flex items-center justify-center">
                   {i + 1}
                 </span>
@@ -149,7 +149,7 @@ export default function VisaGuidePage() {
         {/* Section 5 — FAQ */}
         <section>
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">FAQ</span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-6">Frequently Asked Questions</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-3">Frequently Asked Questions</h2>
           <VisaFAQ />
         </section>
 
@@ -157,19 +157,19 @@ export default function VisaGuidePage() {
         <section>
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Country Guides</span>
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2 mb-5">Visa Guides by Nationality</h2>
-          <p className="text-gray-600 mb-8 leading-relaxed">
+          <p className="text-gray-600 mb-3 leading-relaxed">
             Need country-specific visa information? Select your nationality below — requirements differ depending on whether your country receives visa on arrival or must apply via e-Visa in advance.
           </p>
 
           {/* Visa on Arrival */}
-          <div className="mb-8">
+          <div className="mb-3">
             <div className="flex items-center gap-3 mb-4">
               <span className="inline-flex items-center gap-1.5 bg-green-50 text-green-700 border border-green-200 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
                 Visa on Arrival at Baku Airport
               </span>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
               {[
                 { href: '/visa-guide/china', flag: '🇨🇳', code: 'CN', title: 'Azerbaijan Visa on Arrival for Chinese Citizens', country: 'China' },
                 { href: '/visa-guide/indonesia', flag: '🇮🇩', code: 'ID', title: 'Azerbaijan Visa on Arrival for Indonesian Citizens', country: 'Indonesia' },
@@ -184,7 +184,7 @@ export default function VisaGuidePage() {
                   aria-label={item.title}
                   className="group flex flex-col items-center text-center bg-white border border-gray-100 rounded-2xl px-4 py-6 shadow-sm hover:border-green-300 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
                 >
-                  <span className="text-5xl mb-3 drop-shadow-sm">{item.flag}</span>
+                  <img src={`https://flagcdn.com/w40/${item.code.toLowerCase()}.png`} srcSet={`https://flagcdn.com/w80/${item.code.toLowerCase()}.png 2x`} width={40} height={30} alt={`${item.country} flag`} className="mb-3 rounded shadow-sm" />
                   <span className="hidden sm:inline-block text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-1">{item.code}</span>
                   <p className="font-semibold text-gray-800 group-hover:text-green-700 transition-colors text-sm leading-snug">{item.country}</p>
                   <span className="mt-2 text-xs text-green-600/80 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">View guide →</span>
@@ -201,7 +201,7 @@ export default function VisaGuidePage() {
                 e-Visa Required — Apply Online in Advance
               </span>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
               {[
                 { href: '/visa-guide/india', flag: '🇮🇳', code: 'IN', title: 'Azerbaijan Visa for Indian Citizens', country: 'India' },
                 { href: '/visa-guide/pakistan', flag: '🇵🇰', code: 'PK', title: 'Azerbaijan Visa for Pakistani Citizens', country: 'Pakistan' },
@@ -214,7 +214,7 @@ export default function VisaGuidePage() {
                   aria-label={item.title}
                   className="group flex flex-col items-center text-center bg-white border border-gray-100 rounded-2xl px-4 py-6 shadow-sm hover:border-accent/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
                 >
-                  <span className="text-5xl mb-3 drop-shadow-sm">{item.flag}</span>
+                  <img src={`https://flagcdn.com/w40/${item.code.toLowerCase()}.png`} srcSet={`https://flagcdn.com/w80/${item.code.toLowerCase()}.png 2x`} width={40} height={30} alt={`${item.country} flag`} className="mb-3 rounded shadow-sm" />
                   <span className="hidden sm:inline-block text-[10px] font-bold tracking-widest text-gray-400 uppercase mb-1">{item.code}</span>
                   <p className="font-semibold text-gray-800 group-hover:text-accent transition-colors text-sm leading-snug">{item.country}</p>
                   <span className="mt-2 text-xs text-accent/70 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">View guide →</span>
@@ -273,9 +273,9 @@ export default function VisaGuidePage() {
         </section>
 
         {/* Section 6 — CTA */}
-        <section className="bg-primary rounded-2xl px-8 py-10 text-center">
+        <section className="bg-primary rounded-2xl px-8 py-4 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3">Ready to Plan the Rest of Your Trip?</h2>
-          <p className="text-blue-200 mb-7 leading-relaxed max-w-xl mx-auto">
+          <p className="text-blue-200 mb-3 leading-relaxed max-w-xl mx-auto">
             Lumivara Travel handles airport transfers, hotels, private tours, and complete Azerbaijan itineraries — so you can focus on the experience, not the logistics.
           </p>
           <Link

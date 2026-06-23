@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import ContactForm from './ContactForm'
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative pt-32 pb-20 bg-primary overflow-hidden">
+      <section className="relative pt-24 pb-6 bg-primary overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-accent/20 via-transparent to-transparent" />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Get in Touch</span>
@@ -29,9 +29,9 @@ export default function ContactPage() {
       </section>
 
       {/* Content */}
-      <section className="py-10 bg-light">
+      <section className="py-4 bg-light">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
             {/* Contact Info */}
             <div className="space-y-4">
               <div>
@@ -71,7 +71,7 @@ export default function ContactPage() {
                   link: '#',
                 },
               ].map((item, idx) => (
-                <div key={idx} className="flex items-start gap-4 p-5 bg-white rounded-2xl shadow-sm">
+                <div key={idx} className="flex items-start gap-2 p-3 bg-white rounded-2xl shadow-sm">
                   <div className="w-12 h-12 bg-accent/15 rounded-xl flex items-center justify-center text-accent flex-shrink-0">
                     {item.icon}
                   </div>
@@ -100,7 +100,7 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-2xl shadow-sm p-5 border border-gray-100">
+              <div className="bg-white rounded-2xl shadow-sm p-3 border border-gray-100">
                 <h2 className="text-2xl font-bold text-gray-900 mb-4">Send Us a Message</h2>
                 <ContactForm />
               </div>

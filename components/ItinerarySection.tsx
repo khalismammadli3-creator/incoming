@@ -1,4 +1,4 @@
-import { Destination } from '@/lib/destinations'
+﻿import { Destination } from '@/lib/destinations'
 
 interface ItinerarySectionProps {
   destination: Destination
@@ -13,9 +13,9 @@ export default function ItinerarySection({ destination }: ItinerarySectionProps)
   })
 
   return (
-    <section className="py-10 bg-light">
+    <section className="py-4 bg-light">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-6">
+        <div className="text-center mb-3">
           <span className="text-accent font-semibold text-sm uppercase tracking-wider">Day by Day</span>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
             Tour Itinerary
@@ -28,7 +28,7 @@ export default function ItinerarySection({ destination }: ItinerarySectionProps)
 
           <div className="space-y-4">
             {days.map((day, idx) => (
-              <div key={idx} className="relative flex gap-4">
+              <div key={idx} className="relative flex gap-2">
                 {/* Timeline dot */}
                 <div className="hidden sm:flex flex-col items-center">
                   <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-primary font-bold text-sm flex-shrink-0 z-10">
@@ -37,7 +37,7 @@ export default function ItinerarySection({ destination }: ItinerarySectionProps)
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 bg-white rounded-2xl p-4 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="flex-1 bg-white rounded-2xl p-3 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="sm:hidden w-8 h-8 bg-accent rounded-full flex items-center justify-center text-primary font-bold text-sm flex-shrink-0">
                       {idx + 1}
